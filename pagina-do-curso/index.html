@@ -1,0 +1,798 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>PC na sala de aula: Capacitação para Educadores -</title><meta name="data-notion-page-icon" content="📒"/><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%F0%9F%93%92%3C%2Ftext%3E%3C%2Fsvg%3E"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 1200px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+/*
+ * Toggles and callouts hold arbitrary content, so they can easily be taller
+ * than a page. They must stay breakable: avoiding breaks inside them makes
+ * Chromium push the whole block onto the next page, which leaves the previous
+ * page mostly empty before every long toggle.
+ */
+details,
+aside {
+	margin: 1.25em 0;
+}
+
+/* Keep a toggle's title on the same page as the start of its content. */
+summary {
+	page-break-after: avoid;
+	break-after: avoid;
+}
+
+/*
+ * Toggle headings render as <h1/h2/h3 style="display:inline-block"> inside
+ * <summary>. Without this reset, the heading's margin-top pushes it below the
+ * ::marker (▼), so the triangle and the title appear on separate lines.
+ */
+summary h1,
+summary h2,
+summary h3,
+summary h4 {
+	margin-top: 0;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="310eb69e-4e65-8077-b1ba-d3f086231891" class="page sans" data-notion-page-icon="📒"><header><div class="page-header-icon undefined"><span class="icon" data-emoji="📒"></span></div><h1 class="page-title" dir="auto">PC na sala de aula: Capacitação para Educadores -</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><p id="3b4eb69e-4e65-805b-8779-e12f420db7bb" class="" dir="auto">Este curso foi desenvolvido no âmbito da tese de doutorado Uma proposta de formação docente para o ensino do Pensamento Computacional em cursos de nível médio, de autoria de Kennedy Ferreira Araújo (<a href="mailto:kennedy.araujo@ifc.edu.br">kennedy.araujo@ifc.edu.br</a>), desenvolvida no Programa de Pós-Graduação em Educação Científica e Tecnológica da Universidade Federal de Santa Catarina (UFSC), sob a orientação da Profa. Dra. Tatiana da Silva.</p><p id="310eb69e-4e65-811f-9794-dbef4d914c59" class="" dir="auto">
+</p><details id="310eb69e-4e65-811e-90e4-ca979ca527aa" open="" class="block-color-purple_background toggle" data-notion-highlight="purple_background" dir="auto"><summary> 🎯<strong> OBJETIVOS</strong></summary><div class="indented"><ul id="310eb69e-4e65-81f3-ba94-fb17a5aa986b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Apresentar um panorama sobre o ensino de Computação e atos normativos vigentes, com ênfase nos direcionamentos do ensino de Pensamento Computacional (PC).</li></ul><ul id="310eb69e-4e65-817c-946b-ea194903c96b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Explorar as diferentes perspectivas e evolução do conceito de PC, destacando suas transformações e múltiplas abordagens.</li></ul><ul id="310eb69e-4e65-8100-b2fe-e183884927d9" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Demonstrar uma variedade de recursos, ferramentas e estratégias que os docentes podem empregar para implementar o PC em suas atividades educacionais.</li></ul><ul id="310eb69e-4e65-8117-854a-d55109eed37a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Despertar a programação como uma possibilidade de recurso para desenvolver o PC e trazer possibilidades para a sala de aula.</li></ul><ul id="310eb69e-4e65-814b-89c8-ec85664614fa" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Provocar os docentes sobre a necessidade de conhecimentos que vão além do conhecimento do conteúdo para exercer seu ofício</li></ul><ul id="310eb69e-4e65-812e-88d5-d88100454d9a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Ratificar/Conscientizar/Fomentar a cultura/ótica/percepção a academia como um espaço que o docente pode recorrer para apoiar sua prática pedagógica.</li></ul></div></details><details open="" class="block-color-yellow_background" data-notion-highlight="yellow_background" dir="auto"><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0"><h2 id="310eb69e-4e65-81f5-8e00-dc45133e1eeb" style="display:inline-block">🏷️ Módulo 1: Curricularização do Pensamento Computacional</h2></summary><div class="indented"><div data-notion-highlight="yellow_background" dir="auto"><ul id="310eb69e-4e65-8194-923d-ddf8ab16ad74" class="block-color-yellow_background bulleted-list" data-notion-highlight="yellow_background"><li style="list-style-type:disc"><strong><a href="https://docs.google.com/presentation/d/1_0adpHU6Xib8_cf83DrPVdNFrogLL2iWRaVVHo50eIM/edit?usp=sharing">SLIDES</a></strong></li></ul></div><details id="310eb69e-4e65-81a4-a5ad-e0d76cada17e" open="" class="block-color-yellow_background toggle" data-notion-highlight="yellow_background" dir="auto"><summary>📋 <strong>Avaliação Diagnóstica</strong></summary><div class="indented"><ul id="310eb69e-4e65-8120-8107-de6991a607c3" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://forms.gle/DYMcTFrW6pErz3V38">Link</a></li></ul></div></details><details id="310eb69e-4e65-8130-9bed-e104cdcea2cf" open="" class="block-color-yellow_background toggle" data-notion-highlight="yellow_background" dir="auto"><summary>👥 <strong>Sujeitos</strong></summary><div class="indented"><ul id="310eb69e-4e65-81de-a5d1-c5a1b7b03696" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Apresentação do mediador(es)<ul id="310eb69e-4e65-8183-8a8e-fc26aa1ae51d" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Discorrer sobre a pesquisa</li></ul></li></ul><ul id="310eb69e-4e65-81ad-ab82-d35e2b727def" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Apresentação dos alunos</li></ul></div></details><details id="310eb69e-4e65-81e8-86f2-ef09a802f0b5" open="" class="block-color-yellow_background toggle" data-notion-highlight="yellow_background" dir="auto"><summary>🗒️<strong> O curso</strong></summary><div class="indented"><ul id="310eb69e-4e65-8108-a45a-e25f60afed1e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Carga horária: Xh | Encontros de Xh</li></ul><ul id="310eb69e-4e65-815d-9409-f99eed5d639b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Datas dos encontros:  —-</li></ul><details id="310eb69e-4e65-81eb-b01a-f1776e0e13c5" open="" class="toggle" dir="auto"><summary>Organização dos encontros</summary><div class="indented"><ol type="1" id="310eb69e-4e65-818d-8829-f1a95cf8101a" class="numbered-list" start="1" dir="auto"><li>Metainformações e Contextos<br/>Familiarização com o(s) mediadore(s), colegas de turma, estrutura do curso e as bases para sua criação.</li></ol><ol type="1" id="310eb69e-4e65-817e-85fc-ec12184267bf" class="numbered-list" start="2" dir="auto"><li>Desdobramentos Conceituais: Definição e Pilares<br/>Debate sobre o(s) conceito(s) de PC e suas nuances. Além de abordar os 4 pilares do PC e as estratégias que podem ser utilizadas para o ensino do tema.</li></ol><ol type="1" id="310eb69e-4e65-81e2-94cd-e8ea7adbd304" class="numbered-list" start="3" dir="auto"><li>Prática Docente<br/>Reflexão sobre o papel da aprendizagem na concretização dos objetivos educacionais. Exposição de estratégias de busca em bases acadêmicas para subsidiar a prática pedagógica.</li></ol><ol type="1" id="310eb69e-4e65-81dd-bd28-e897c39965cd" class="numbered-list" start="4" dir="auto"><li>Resolução de problemas com programação<br/>Aprofundamento quanto o uso da programação no ensino do PC. </li></ol></div></details><ul id="310eb69e-4e65-81b8-af6e-f337424be609" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Regras de convivência<ul id="310eb69e-4e65-813b-b916-f686ff976d58" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Sobre o erro: é permitido errar!</li></ul></li></ul></div></details><details id="310eb69e-4e65-81d8-b7b8-fdcdcf51c8ec" open="" class="block-color-yellow_background toggle" data-notion-highlight="yellow_background" dir="auto"><summary>🧭 <strong>Conhecimentos para ensinar</strong></summary><div class="indented"><details id="310eb69e-4e65-81b8-9216-c81e48bcd204" open="" class="toggle" dir="auto"><summary>Conhecimento Pedagógico do Conteúdo</summary><div class="indented"><ul id="310eb69e-4e65-8136-9fc3-e51a206a6f2c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">1986 - Lee S. Shulman - <a href="https://www.wcu.edu/webfiles/pdfs/shulman.pdf">Those Who Understand:Knowledge Growth in TeachingThose Who Understand:Knowledge Growth in Teaching</a></li></ul></div></details><details id="310eb69e-4e65-81a1-961a-e6e14e6ecb6c" open="" class="toggle" dir="auto"><summary>Fontes do conhecimento</summary><div class="indented"><ul id="310eb69e-4e65-8190-8a67-e602b2c91f85" class="bulleted-list" dir="auto"><li style="list-style-type:disc">1987 - Lee S. Shulman - <a href="https://people.ucsc.edu/~ktellez/shulman.pdf">Knowledge and teaching: foundations of the new reform</a><ul id="310eb69e-4e65-81c8-9b67-fa6f5f65fa63" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Tradução: <a href="https://cadernos.cenpec.org.br/cadernos/index.php/cadernos/article/view/293">Conhecimento e ensino: fundamentos para a nova reforma</a></li></ul></li></ul></div></details><details id="310eb69e-4e65-8195-9fae-cdab45585e94" open="" class="toggle" dir="auto"><summary>Conhecimento Tecnológico do Conteúdo - TPACK</summary><div class="indented"><ul id="310eb69e-4e65-8107-90c5-f1a2717d371b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">2006 - Mishra e Koehler - <a href="https://one2oneheights.pbworks.com/f/MISHRA_PUNYA.pdf">Technological pedagogical content knowledge: A<br/>framework for teacher knowledge</a></li></ul><ul id="310eb69e-4e65-8185-96ac-c0994dd506c4" class="bulleted-list" dir="auto"><li style="list-style-type:disc">2008/2016 - Koehler e Mishra - <a href="https://www.taylorfrancis.com/books/edit/10.4324/9781315771328/handbook-technological-pedagogical-content-knowledge-tpack-educators-matthew-koehler-punya-mishra">Handbook of Technological Pedagogical Content Knowledge (TPACK) for Educators</a></li></ul><ul id="310eb69e-4e65-8125-94ea-fb751f64c368" class="bulleted-list" dir="auto"><li style="list-style-type:disc">2009 - <a href="https://citejournal.org/volume-9/issue-1-09/general/what-is-technological-pedagogicalcontent-knowledge/">Mishra e Koehler - What Is Technological Pedagogical Content Knowledge?</a></li></ul></div></details></div></details><details id="310eb69e-4e65-81b0-9416-f8f6fa936c54" open="" class="block-color-yellow_background toggle" data-notion-highlight="yellow_background" dir="auto"><summary>⚙️ <strong>Recursos utilizados</strong></summary><div class="indented"><ul id="310eb69e-4e65-818f-b254-c421daf3da00" class="bulleted-list" dir="auto"><li style="list-style-type:disc">AVA: GoogleClassRoom</li></ul><ul id="310eb69e-4e65-818a-ba99-cfc9357f243d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Ferramenta para conferência: GoogleMeet<ul id="310eb69e-4e65-8110-909c-d718f8ead8ad" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Adicionar emails para convite</li></ul></li></ul><ul id="310eb69e-4e65-810d-ae5b-c6c203b931a9" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Formas de comunicação<ul id="310eb69e-4e65-816b-a367-fea1ff5cd112" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Whatsapp<ul id="310eb69e-4e65-8128-8b65-d9a4fa43bfe6" class="bulleted-list" dir="auto"><li style="list-style-type:square">Grupo</li></ul><ul id="310eb69e-4e65-8138-b42c-e4b16cb28b65" class="bulleted-list" dir="auto"><li style="list-style-type:square">Número pessoal: 049984253630</li></ul></li></ul><ul id="310eb69e-4e65-81c7-b147-df9371bbfb4b" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Email: kennedy.araujo@ifc.edu.br</li></ul></li></ul><ul id="310eb69e-4e65-81bd-974f-db76e4ef251f" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Página do curso</li></ul></div></details><details id="310eb69e-4e65-8103-b08a-e94a4e8cbcc5" open="" class="block-color-yellow_background toggle" data-notion-highlight="yellow_background" dir="auto"><summary>🙇🏽‍♂️<strong> Por que estudar PC?</strong></summary><div class="indented"><ul id="310eb69e-4e65-8141-9e4c-d88e11569dc8" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Benefícios e importância<ul id="310eb69e-4e65-8140-9023-d9831ff14725" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Estratégia de resolução de problemas complexos</li></ul><ul id="34eeb69e-4e65-8088-b2c0-c0331121c6e4" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Estruturar soluções eficientes</li></ul><ul id="34eeb69e-4e65-80c8-9bab-d2f39d5b6f1e" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Habilidade que pode ser utilizada em diferentes áreas</li></ul><ul id="34eeb69e-4e65-8031-8042-c9211ba3a6a2" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Promoção do pensamento lógico e crítico</li></ul><ul id="34eeb69e-4e65-80a3-99a1-c171b63a506f" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Fortalecimento da criatividade e inovação</li></ul><ul id="34eeb69e-4e65-80c8-ae1d-ee8b6257d4e3" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Desenvolvimento da autonomia</li></ul><ul id="34eeb69e-4e65-8040-8f26-e32538ad351d" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Exigência normativa</li></ul></li></ul></div></details><details id="310eb69e-4e65-81be-a941-d8d4806a208b" open="" class="block-color-yellow_background toggle" data-notion-highlight="yellow_background" dir="auto"><summary>📈 <strong>Educação em Computação: Evolução e  Aspectos Normativos </strong></summary><div class="indented"><ul id="310eb69e-4e65-8153-9048-d7a80dd3f619" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Ensino da Computação no Brasil<ul id="310eb69e-4e65-81cf-9f3b-e961a8100177" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Histórico<ul id="310eb69e-4e65-8147-ab44-e99a915b439f" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="http://portal.mec.gov.br/index.php?option=com_docman&amp;view=download&amp;alias=235511-pceb002-22&amp;category_slug=fevereiro-2022-pdf&amp;Itemid=30192">Parecer CNE - 17/02/2022 - Norma ensino de computação na educação básica</a> <a href="http://portal.mec.gov.br/docman/setembro-2019/124721-texto-referencia-formacao-de-professores/file">[2]</a></li></ul></li></ul><ul id="310eb69e-4e65-81ee-872b-e2edd659b856" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Propostas de Currículos<ul id="310eb69e-4e65-8122-90f4-c9f2a4cb7e41" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://curriculo.cieb.net.br/">Currículo CBIE</a><ul id="310eb69e-4e65-8139-a3ab-d46dbc8d6144" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://curriculo.cieb.net.br/curriculo">Currículo interativo - Escolher o eixo e os conceitos</a></li></ul><ul id="310eb69e-4e65-812e-9185-cd87640a8a9e" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://github.com/kennedyaraujo/curso-pc/blob/main/mod1/curriculo-cieb.pdf">Versão em PDF</a></li></ul></li></ul><ul id="310eb69e-4e65-812b-80da-ccc78a9ea929" class="bulleted-list" dir="auto"><li style="list-style-type:square">Currículo SBC<ul id="310eb69e-4e65-8112-8c8d-ea10595b9322" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://github.com/kennedyaraujo/curso-pc/blob/main/mod1/nota-tecnica-bncc-sbc-20118.pdf">Nota técnica SBC sobre BNCC</a></li></ul><ul id="310eb69e-4e65-81fc-8c2e-ffa6b3f93ee2" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://github.com/kennedyaraujo/curso-pc/blob/main/mod1/diretrizes-sbc-ensino-de-comp-na-edu-basica-2019.pdf">Diretrizes para ensino de Computação na Educação Básica</a></li></ul><ul id="310eb69e-4e65-813c-bbd2-fcfd2896c3e2" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://github.com/kennedyaraujo/curso-pc/blob/main/referenciais-de-formacao-em-computacao-educacao-basica-julho-2017.pdf">Referenciais de Formação em Computação Educação Básica - julho 2017</a></li></ul></li></ul></li></ul></li></ul><ul id="310eb69e-4e65-819f-80f8-d67e497369ab" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Norma complementar para o ensino de Computação na educação básica<ul id="310eb69e-4e65-81db-b3c1-f92ac7fd68ad" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.in.gov.br/en/web/dou/-/resolucao-n-1-de-4-de-outubro-de-2022-434325065">RESOLUÇÃO Nº 1, DE 4 DE OUTUBRO DE 2022</a></li></ul><ul id="310eb69e-4e65-8150-8bb0-d056c6543b28" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="http://portal.mec.gov.br/index.php?option=com_docman&amp;view=download&amp;alias=236791-anexo-ao-parecer-cneceb-n-2-2022-bncc-computacao&amp;category_slug=fevereiro-2022-pdf&amp;Itemid=30192">NORMA</a> - <a href="https://github.com/kennedyaraujo/curso-pc/blob/main/mod1/bncc-computacao-tabela-horizontal.pdf">[Tabelas horizontal]</a></li></ul><ul id="310eb69e-4e65-810f-b126-fa23f9c99af4" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="http://portal.mec.gov.br/index.php?option=com_docman&amp;view=download&amp;alias=235511-pceb002-22&amp;category_slug=fevereiro-2022-pdf&amp;Itemid=30192">Parecer CNE - 17/02/2022 - Norma ensino de computação na educação básica</a> <a href="http://portal.mec.gov.br/docman/setembro-2019/124721-texto-referencia-formacao-de-professores/file">[2]</a></li></ul><ul id="310eb69e-4e65-818a-915d-e3e0142b0e8b" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.incod.ufsc.br/wp-content/uploads/2019/05/RT-INCOD-GQS022019P.pdf">Habilidades do Pensamento Computacional na Educação Básica conforme Base Nacional Comum Curricular (BNCC) e SBC</a></li></ul></li></ul><ul id="310eb69e-4e65-8116-b75b-f7c6efe4b32e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Política Nacional de Educação Digital <ul id="310eb69e-4e65-8121-b10a-fa1a4cfb7921" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14533.htm?=undefined">LEI Nº 14.533, DE 11 DE JANEIRO DE 2023</a></li></ul><ul id="310eb69e-4e65-8124-b0af-d2eec4eef15d" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Engloba:<ul id="310eb69e-4e65-81ae-8c47-cc9e472efb42" class="bulleted-list" dir="auto"><li style="list-style-type:square"><strong>pensamento computacional</strong>, que se refere à capacidade de compreender, analisar, definir, modelar, resolver, comparar e automatizar problemas e suas soluções de forma metódica e sistemática, por meio do desenvolvimento da capacidade de criar e adaptar algoritmos, com aplicação de fundamentos da computação para alavancar e aprimorar a aprendizagem e o pensamento criativo e crítico nas diversas áreas do conhecimento;</li></ul><ul id="310eb69e-4e65-8111-ac8c-e457c6881f19" class="bulleted-list" dir="auto"><li style="list-style-type:square"><strong>mundo digital</strong>, que envolve a aprendizagem sobre hardware, como computadores, celulares e tablets, e sobre o ambiente digital baseado na internet, como sua arquitetura e aplicações;</li></ul><ul id="310eb69e-4e65-817f-8e27-ed41172f9f92" class="bulleted-list" dir="auto"><li style="list-style-type:square"><strong>cultura digital</strong>, que envolve aprendizagem destinada à participação consciente e democrática por meio das tecnologias digitais, o que pressupõe compreensão dos impactos da revolução digital e seus avanços na sociedade, a construção de atitude crítica, ética e responsável em relação à multiplicidade de ofertas midiáticas e digitais e os diferentes usos das tecnologias e dos conteúdos disponibilizados;</li></ul><ul id="310eb69e-4e65-816f-a73e-c42f3a0b60c2" class="bulleted-list" dir="auto"><li style="list-style-type:square"><strong>direitos digitais</strong>, que envolve a conscientização a respeito dos direitos sobre o uso e o tratamento de dados pessoais, nos termos da Lei nº 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais), a promoção da conectividade segura e a proteção dos dados da população mais vulnerável, em especial crianças e adolescentes;</li></ul><ul id="310eb69e-4e65-8191-80c4-f8a4bc3359c6" class="bulleted-list" dir="auto"><li style="list-style-type:square"><strong>tecnologia assistiva</strong>, que engloba produtos, recursos, metodologias, estratégias, práticas e serviços que objetivam promover a funcionalidade e a aprendizagem, com foco na inclusão de pessoas com deficiência ou mobilidade reduzida.</li></ul></li></ul></li></ul><ul id="34eeb69e-4e65-803e-8a39-fb1fba7bce8e" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://github.com/kennedyaraujo/curso-pc/blob/main/mod1/oficio-88-2024-mec.pdf">Ofício nº 88/2024/CEB/SAO/CNE/CNE-MEC</a><ul id="34eeb69e-4e65-8023-8416-ffa9cd0a60d9" class="bulleted-list" dir="auto"><li style="list-style-type:circle">“Nesse sentido, o componente curricular inscrito no § 11 do art. 26 da Lei no 9394, de 20 de dezembro de 1996, incluído por força do art. 7º da Lei no 14.533, de 11 de janeiro de 2023, poderá ou não ter o formato de disciplina a depender das abordagens pedagógicas da instituição. Será disciplinar se for essa a organização curricular, ou transversal caso seja essa a organização curricular. A concepção pedagógica e a consequente formulação da proposta curricular deve corresponder aos interesses do processo de ensino-aprendizagem (Art. 23 LDB), podendo a instituição dar o formato que entender mais adequado ao projeto político pedagógico da escola, respeitando, sempre, as normas educacionais.”</li></ul></li></ul></div></details><details id="310eb69e-4e65-810c-a843-dd23ae390b73" open="" class="block-color-yellow_background toggle" data-notion-highlight="yellow_background" dir="auto"><summary><strong>MATERIAL COMPLEMENTAR</strong></summary><div class="indented"><div data-notion-highlight="yellow_background" dir="auto"><ul id="310eb69e-4e65-8124-9410-f9dbe0e1ce98" class="block-color-yellow_background bulleted-list" data-notion-highlight="yellow_background"><li style="list-style-type:disc"><a href="https://www.computacional.com.br/">Computacional</a></li></ul></div></div></details></div></details><details open="" class="block-color-gray_background" data-notion-highlight="gray_background" dir="auto"><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0"><h2 id="310eb69e-4e65-818f-9997-c211a2716296" style="display:inline-block"> 🧵 Módulo 2: Aprofundamento Conceitual e Desconstrução de Concepções - Desdobramentos Conceituais</h2></summary><div class="indented"><details id="310eb69e-4e65-81f5-8001-cb0db7d3fd6c" open="" class="block-color-gray_background toggle" data-notion-highlight="gray_background" dir="auto"><summary>🗓️ <strong>Histórico Pensamento Computacional</strong></summary><div class="indented"><ul id="356eb69e-4e65-8020-ad84-ef6ceb1cd678" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Lacunas Remanescentes no Pensamento Computacional [<a href="https://dl.acm.org/doi/abs/10.1145/2998438">Remaining Trouble Spotswith ComputationalThinking</a>] - Peter J. Denning - 2017  [<a href="https://github.com/kennedyaraujo/curso-pc/blob/main/mod2/2017-peter-j-denning-remaining-trouble-spots-with-computational-thinking-historico-pc.pdf">2</a>]</li></ul><details id="356eb69e-4e65-807c-9dfc-d17169da2b2a" open="" class="toggle" dir="auto"><summary>Tabela Resumo do Histórico</summary><div class="indented"><table id="356eb69e-4e65-80d1-93b4-c5168245cb58" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="356eb69e-4e65-80ce-8e91-c4b2950ce0f0" dir="ltr"><th id="|C:n" class="simple-table-header-color simple-table-header">Ano</th><th id="iMd\" class="simple-table-header-color simple-table-header">Autor(es)</th><th id=";xfd" class="simple-table-header-color simple-table-header">Contribuição</th><th id="]Ad_" class="simple-table-header-color simple-table-header">Relação com o Pensamento Computacional</th></tr></thead><tbody><tr id="356eb69e-4e65-8002-8c94-e835a277e711" dir="ltr"><td id="|C:n" class="">1945</td><td id="iMd\" class="">George Pólya</td><td id=";xfd" class="">Publica <em>How to Solve It</em>, abordando métodos mentais para resolução de problemas matemáticos</td><td id="]Ad_" class="">Precursor do Pensamento Computacional ao sistematizar estratégias de resolução de problemas</td></tr><tr id="356eb69e-4e65-8055-9ef4-cdd086bc683c" dir="ltr"><td id="|C:n" class="">1960</td><td id="iMd\" class="">Alan Perlis</td><td id=";xfd" class="">Introduz a ideia de “algoritmizar” (“algorithmizing”) como prática cultural emergente; Lacunas Remanescentes no Pensamento Computacional</td><td id="]Ad_" class="">Destaca a centralidade dos algoritmos na transformação de diferentes áreas</td></tr><tr id="356eb69e-4e65-80e8-a602-df070826fed8" dir="ltr"><td id="|C:n" class="">Década de 1960</td><td id="iMd\" class="">Allen Newell, Alan Perlis, Herbert A. Simon</td><td id=";xfd" class="">Defesa da Ciência da Computação como campo científico baseado em “transformadores de informação”</td><td id="]Ad_" class="">Consolidação do pensamento algorítmico como elemento distintivo da área</td></tr><tr id="356eb69e-4e65-80e0-8501-e0ca966da706" dir="ltr"><td id="|C:n" class="">1974</td><td id="iMd\" class="">Donald Knuth</td><td id=";xfd" class="">Relaciona a construção de algoritmos ao processo de ensino e compreensão de problemas</td><td id="]Ad_" class="">Algoritmos como ferramenta para aprofundamento conceitual</td></tr><tr id="356eb69e-4e65-806b-8e9c-d78bb7894587" dir="ltr"><td id="|C:n" class="">1979</td><td id="iMd\" class="">Edsger W. Dijkstra</td><td id=";xfd" class="">Descreveu hábitos computacionais da mente: separação de interesses, abstração eficaz e uso de notações adequadas.</td><td id="]Ad_" class="">Estruturação dos fundamentos cognitivos do Pensamento Computacional</td></tr><tr id="356eb69e-4e65-804a-a792-fd960d30d27a" dir="ltr"><td id="|C:n" class="">1980</td><td id="iMd\" class="">Seymour Papert</td><td id=";xfd" class="">O primeiro a usar o termo &quot;pensamento computacional&quot; em Mindstorms, referindo-se à habilidade mental desenvolvida pela programação.</td><td id="]Ad_" class="">Introduz o conceito no contexto educacional</td></tr><tr id="356eb69e-4e65-805d-ade9-f263afd407ff" dir="ltr"><td id="|C:n" class="">1982</td><td id="iMd\" class="">Kenneth G. Wilson</td><td id=";xfd" class="">Nobel de Física; defendeu a &quot;ciência computacional&quot; como novo paradigma, ao lado da teoria e do experimento.</td><td id="]Ad_" class="">Consolidação da computação como paradigma científico</td></tr><tr id="356eb69e-4e65-806f-9eeb-d08d8e5feeed" dir="ltr"><td id="|C:n" class="">1991</td><td id="iMd\" class="">Congresso dos EUA</td><td id=";xfd" class="">Aprovação do HPCC Act, financiando pesquisa em computação de alto desempenho — resultado do movimento liderado por Wilson.</td><td id="]Ad_" class="">Expansão institucional da ciência computacional</td></tr><tr id="356eb69e-4e65-80d3-91e5-c7ae6f76f3cc" dir="ltr"><td id="|C:n" class="">2006</td><td id="iMd\" class="">Jeannette Wing</td><td id=";xfd" class="">Catalisou o debate moderno sobre pensamento computacional e mobilizou recursos para inseri-lo no ensino básico (K–12).</td><td id="]Ad_" class="">Marco contemporâneo de difusão do conceito</td></tr><tr id="356eb69e-4e65-8091-8d79-e11428e1de36" dir="ltr"><td id="|C:n" class="">2011</td><td id="iMd\" class="">Alfred V. Aho</td><td id=";xfd" class="">Definiu Pensamento Computacional como a formulação de problemas para que suas soluções sejam representadas como algoritmos, enfatizando o papel central dos modelos computacionais.</td><td id="]Ad_" class="">Consolidação teórica moderna, enfatizando modelos e algoritmos</td></tr></tbody></table></div></details><details id="356eb69e-4e65-8097-a6d4-df98b957baeb" open="" class="toggle" dir="auto"><summary>Referencias complementares</summary><div class="indented"><details id="356eb69e-4e65-805c-b68f-d9e678319daf" open="" class="toggle" dir="auto"><summary>A arte de resolver Problemas</summary><div class="indented"><ul id="310eb69e-4e65-8166-9282-e4dcc88fc46e" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://hackmd.io/@pvhbu7pkRQWb0jhWB0TdEQ/BkBEcmvTR">A arte de resolver problemas - George Polya - Resumo</a></li></ul><ul id="310eb69e-4e65-819d-a01c-e7fead93bd98" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Dividir o trabalho em quatro fases;<ul id="310eb69e-4e65-81d2-9fb9-caaafc55d98a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Compreender o problema.</li></ul><ul id="310eb69e-4e65-81f3-8f5b-cacfc658bc59" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Ver como os itens se inter-relacionam e criar um plano.</li></ul><ul id="310eb69e-4e65-81a1-bc61-c230a024a5b6" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Executar o plano.</li></ul><ul id="310eb69e-4e65-81c9-8312-cf5c72bd49c0" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Revisar e discutir a solução.</li></ul></li></ul></div></details><details id="356eb69e-4e65-808f-a0ad-cce755f7377c" open="" class="toggle" dir="auto"><summary>Alfred V. Aho - 2010</summary><div class="indented"><ul id="356eb69e-4e65-8002-a7e8-ce30f36b8d1e" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://people.cs.vt.edu/~kafura/CS6604/Papers/Computation-And-CT.pdf">Computation and Computational Thinking</a></li></ul></div></details></div></details></div></details><details id="310eb69e-4e65-815d-afc4-fa6932f1c5a9" open="" class="block-color-gray_background toggle" data-notion-highlight="gray_background" dir="auto"><summary>🔍 <strong>Em busca de uma definição de PC</strong></summary><div class="indented"><ul id="310eb69e-4e65-8143-93c4-f96670bef941" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Elaborar definição da turma<ul id="310eb69e-4e65-8129-ae0b-ddbb179a83a2" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://docs.google.com/spreadsheets/d/19BqNreBgYtmycIAdak6hTROsHgJurLiumpJ1M3kSuZQ/edit?usp=sharing">Tabela de conceitos</a></li></ul></li></ul><p id="310eb69e-4e65-8152-a48d-f7400394871e" class="" dir="auto">💡: Comparar o entendimento presente na avaliação diagnóstica com a definição proposta pela turma</p></div></details><details id="310eb69e-4e65-81ce-8ab6-cbcc2ab5676c" open="" class="block-color-gray_background toggle" data-notion-highlight="gray_background" dir="auto"><summary>🏛️<strong> Pilares do PC</strong></summary><div class="indented"><ul id="310eb69e-4e65-8176-b230-ccd9d7a8408c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Abstração</strong>:  Ter foco nos processos relevantes ao invés de priorizar o detalhe. Ao filtrar e classificar os dados mais relevantes para a resolução das questões, é possível desenvolver uma análise crítica e atenta à essência do tema trabalho. A coleta seletiva é um exemplo de uso de abstração. Não importa o produto em si, os agrupamos pelo tipo de tratamento que pretendemos dar a eles (plástico, metal, vidro, papel…)</li></ul><ul id="310eb69e-4e65-8161-b5ee-f9f14cae6559" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Reconhecimento de padrões</strong>: Reconhecer similaridades, aquilo que se repete na resolução de problemas. Quanto mais padrões encontrarmos, mais fácil e rápida será a tarefa de solucionar problemas. O reconhecimento de padrões pode ser utilizado para prever o próximo número em uma sequência; identificar uma espécie de um animal pelas características apresentadas.</li></ul><ul id="310eb69e-4e65-8144-9d21-da0af8bfc4ad" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Decomposição</strong>: Dividir um problema em partes menores. Trabalhar em fragmentos do problema pode facilitar a solução. O planejamento de uma aula é um exemplo de decomposição. Pois é preciso identificar os conteúdos, organizar os materiais, descrever o tempo a ser dedicado.</li></ul><ul id="310eb69e-4e65-8131-ba5f-fb67c0463dc6" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Algoritmos</strong>: Criação de uma sequência de passos (etapas) para alcançar um objetivo. É um conjunto de instruções ordenadas para a solução de um problema ou execução de uma tarefa. Escrever um receita é criar um algoritmo em que outra pessoa poderá seguir aqueles passos e chegar à mesma solução: o prato pronto para o consumo com gosto desejado.</li></ul></div></details><details id="310eb69e-4e65-81e3-a11a-c167c3140694" open="" class="block-color-gray_background toggle" data-notion-highlight="gray_background" dir="auto"><summary>📒 Material Complementar</summary><div class="indented"><ul id="310eb69e-4e65-81c3-9b34-ec664b0f596d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://coggle.it/diagram/ZqgF4Gw-U5Vz4e3J/t/pensamento-computacional/4a3592ac752d13c8d7a510af44e7d544f14af45fa0120305881a5daea80b22a6">Mapa Resumo</a></li></ul><ul id="359eb69e-4e65-8091-87de-f1eaa71d771b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://almanaquesdacomputacao.com.br/gutanunes/publications/serie7/S7V1small.pdf">Almanaque Computação</a></li></ul></div></details><p id="310eb69e-4e65-81c4-a2dc-c8c91158e899" class="" dir="auto">
+</p></div></details><details open="" class="block-color-blue_background" data-notion-highlight="blue_background" dir="auto"><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0"><h2 id="310eb69e-4e65-81e6-8154-dd6555a98a2a" style="display:inline-block"> 👨🏽‍🏫 Módulo 3: Prática Pedagógica</h2></summary><div class="indented"><details id="310eb69e-4e65-816c-81e7-f88dc6b83fd0" open="" class="block-color-blue_background toggle" data-notion-highlight="blue_background" dir="auto"><summary>👨🏽‍🏫 <strong>Estratégias para o ensino de PC</strong></summary><div class="indented"><ul id="310eb69e-4e65-81fe-91c0-cd741d1680bc" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Desplugada<ul id="310eb69e-4e65-81c6-bed9-c986acbbcf3c" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://desplugada.ime.unicamp.br/index.html">Site Computação Desplugada</a></li></ul><ul id="310eb69e-4e65-81d7-ab56-d5c0e5e31f50" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.computacional.com.br/files/Material%20Didatico/Ferrari%20-%20Livro%20de%20Atividades%20Desplugadas.pdf">Adaptações das atividades</a></li></ul><ul id="310eb69e-4e65-81ec-a5b1-feb4d74791bf" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Livro<ul id="310eb69e-4e65-81b0-a59b-d4d4f9cf14a7" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://classic.csunplugged.org/documents/books/portuguese/CSUnpluggedTeachers-portuguese-brazil-feb-2011.pdf">Português</a></li></ul><ul id="310eb69e-4e65-81e7-bb51-eff81a2a4760" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://classic.csunplugged.org/documents/books/english/CSUnplugged_OS_2015_v3.1.pdf">Inglês</a></li></ul></li></ul></li></ul><ul id="310eb69e-4e65-81d0-b6b3-def92a4e11e7" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Plugada<ul id="310eb69e-4e65-81fc-a591-e5097f0b7f1d" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.digipuzzle.net/pt/jogoseducativos/">DigiPuzzle</a></li></ul><ul id="310eb69e-4e65-81cd-b0ee-c00dcbb17058" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.coquinhos.com/">Coquinhos</a></li></ul></li></ul></div></details><details id="359eb69e-4e65-80e8-b8d1-c0a90aed4733" open="" class="block-color-blue_background toggle" data-notion-highlight="blue_background" dir="auto"><summary>🏛️<strong> Pilares do PC</strong></summary><div class="indented"><ul id="359eb69e-4e65-804f-ad7b-fe5a1e50e44c" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Abstração</strong>:  Ter foco nos processos relevantes ao invés de priorizar o detalhe. Ao filtrar e classificar os dados mais relevantes para a resolução das questões, é possível desenvolver uma análise crítica e atenta à essência do tema trabalho. A coleta seletiva é um exemplo de uso de abstração. Não importa o produto em si, os agrupamos pelo tipo de tratamento que pretendemos dar a eles (plástico, metal, vidro, papel…)<ul id="359eb69e-4e65-8040-bfe3-dae3bcd164bc" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Atividades<ul id="359eb69e-4e65-8008-8c72-f99ea54eda55" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://www.escolagames.com.br/jogos/coleta-seletiva">Atividade Coleta Seletiva</a></li></ul><ul id="359eb69e-4e65-80b1-bbae-e7e0f2519795" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://www.coquinhos.com/sombras-de-animais-marinhos/play/">Sombras de animais</a></li></ul><ul id="359eb69e-4e65-8020-b190-cd497dea9f6a" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://atividadeseducativas.com.br/atividades/16285_figuras_geometricas/index.html">Percepção de forma</a> [<a href="https://atividadeseducativas.com.br/index.php?id=16285">1</a>]</li></ul><ul id="359eb69e-4e65-805d-baa2-f739a7bd26cc" class="bulleted-list" dir="auto"><li style="list-style-type:square"></li></ul><ul id="359eb69e-4e65-8023-8344-fe6a2808fe4c" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://colorfle.com/">Colorfle</a></li></ul></li></ul></li></ul><ul id="359eb69e-4e65-8093-b930-c6edd8252f66" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Reconhecimento de padrões</strong>: Reconhecer similaridades, aquilo que se repete na resolução de problemas. Quanto mais padrões encontrarmos, mais fácil e rápida será a tarefa de solucionar problemas. O reconhecimento de padrões pode ser utilizado para prever o próximo número em uma sequência; identificar uma espécie de um animal pelas características apresentadas.<ul id="359eb69e-4e65-80c6-95d1-ee7dd0eb632f" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Atividades<ul id="359eb69e-4e65-8046-9653-e77e7eec35f5" class="bulleted-list" dir="auto"><li style="list-style-type:square">Identificar padrões em sequências<ul id="359eb69e-4e65-803c-ac77-ca8fac9af9af" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Sequências numéricas</li></ul><ul id="359eb69e-4e65-80bf-8008-e898bdd3b8bd" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Sequência com imagens<ul id="359eb69e-4e65-8062-a039-ff1ee224b894" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.topmarks.co.uk/ordering-and-sequencing/shape-patterns">Shape Patterns</a></li></ul><ul id="359eb69e-4e65-8020-ac00-c9b3372b5940" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Precisa de logn<ul id="359eb69e-4e65-800d-a62d-eebb8d6b93b4" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://www.education.com/games/identify-continue-shape-patterns/">Imagens - baixa complexidade</a></li></ul><ul id="359eb69e-4e65-80b4-811a-e0ee6c67eb80" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://www.braingymmer.com/en/brain-games/next/play/">Padrões, posicionar elementos na sequência</a></li></ul></li></ul><ul id="359eb69e-4e65-8043-aefa-dcc9a080be7d" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.roomrecess.com/mobile/GeoPatterns/play.html">RoomRecess - GeoPattern</a></li></ul><ul id="359eb69e-4e65-8086-94ab-ebc428090863" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Atividades Desplugadas - Baixa Complexidade<ul id="359eb69e-4e65-808f-86eb-fee51d661b27" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://www.twinkl.com.br/resource/au-n-033-the-very-hungry-caterpillar-pattern-sheet">Lagarta faminta</a></li></ul><ul id="359eb69e-4e65-80a3-82cb-c06e6fe0dba2" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://www.twinkl.com.br/resource/t-n-193-repeating-pattern-worksheets-shapes-and-colours">Padrões Geométricos</a></li></ul><ul id="359eb69e-4e65-8060-bb15-c40002480287" class="bulleted-list" dir="auto"><li style="list-style-type:square"><strong><a href="https://www.twinkl.com.br/resource/t-n-5125-two-colour-repeating-pattern-snake-fingerprint-activity-sheet"> Cobra com padrão de repetição</a></strong></li></ul></li></ul></li></ul><ul id="359eb69e-4e65-801b-9a69-d1bcd4a2025d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://dk.specialisterne.com/en/pattern-recognition-game/">Completar imagem</a><ul id="359eb69e-4e65-805e-8635-f40f358beb7b" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Não precisa de login</li></ul></li></ul><ul id="359eb69e-4e65-80a0-9589-f60484b8532d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.educagaming.com/games/riddlesmatematica-natal/?lang=pt">Enigmas</a></li></ul><ul id="359eb69e-4e65-8073-bb76-cc15af6e22f9" class="bulleted-list" dir="auto"><li style="list-style-type:disc">JOGO SET<ul id="359eb69e-4e65-803c-8215-e18d941895d7" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="http://www.setgame.com/set/puzzle">Set Game</a> - Oficial</li></ul><ul id="359eb69e-4e65-801e-9635-e0fb80c1bfc3" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://playset.netlify.app/">SET- Encontrar o set e pressionar barra de espaço</a></li></ul><ul id="359eb69e-4e65-8076-8c55-fc2252071809" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://smart-games.org/en/set_classic/start/">SET - Smart Games</a></li></ul></li></ul><ul id="359eb69e-4e65-8026-a48b-cf7647dbe6d7" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.braingymmer.com/en/brain-games/pattern_matrix/play/">Repetição de imagens</a></li></ul><ul id="359eb69e-4e65-8038-a8ba-c85ee22eb956" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.braingymmer.com/en/brain-games/pattern_matrix/play/">Reconhecer padrões em imagens - BrainGymmer</a></li></ul></li></ul></li></ul></li></ul><ul id="359eb69e-4e65-8002-a3fd-ccbd66fcae6d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Decomposição</strong>: Dividir um problema em partes menores. Trabalhar em fragmentos do problema pode facilitar a solução. O planejamento de uma aula é um exemplo de decomposição. Pois é preciso identificar os conteúdos, organizar os materiais, descrever o tempo a ser dedicado.<details id="359eb69e-4e65-80c9-97d7-f2683ad7ae8d" open="" class="toggle" dir="auto"><summary>Tangran</summary><div class="indented"><ul id="359eb69e-4e65-80ac-9f0e-d6d946d27baf" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Sites<ul id="359eb69e-4e65-8015-a424-fccc2cfb77dc" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Mathigon <a href="https://mathigon.org/tangram">tangran</a></li></ul><ul id="359eb69e-4e65-806e-8707-f379a881a858" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://polypad.amplify.com/tangram">Polypad</a></li></ul></li></ul><ul id="359eb69e-4e65-801b-9b96-eab92efe1a7d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Conteúdos para impressão<ul id="359eb69e-4e65-80d3-8301-edab37054435" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.myhomeschoolmath.com/Worksheets/Tangram-Animals.pdf">Base - Imagens - Gabarito</a> <figure id="359eb69e-4e65-8067-89de-d84b6e5fbf9b" dir="ltr"><div class="source"><a href="Tangram-Animals.pdf" data-notion-file="Tangram-Animals.pdf" data-notion-file-alias="Tangram-Animals.pdf">Tangram-Animals.pdf</a></div></figure></li></ul><ul id="359eb69e-4e65-8047-bdb4-d0b09bbbc6d7" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://eslvault.com/free-printable-tangram-puzzles/">Base - Imagens - Gabarito</a></li></ul><ul id="359eb69e-4e65-801e-9477-fe58c58ad97f" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.tangram-channel.com/crafts-activities/tangram-snap-cards/tangram-snap-templates/">Jogo com tangran</a></li></ul></li></ul></div></details><details id="359eb69e-4e65-80ad-b34b-e10dda020929" open="" class="toggle" dir="auto"><summary>Colorindo com números</summary><div class="indented"><ul id="359eb69e-4e65-80a0-a8a3-de328b92c471" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www5.lunapic.com/">Site</a></li></ul><ul id="359eb69e-4e65-80ec-9af3-fef48b0da5fd" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://imgur.com/a/tNmykWB">https://imgur.com/a/tNmykWB</a></li></ul><ul id="359eb69e-4e65-806e-a7bb-d9b5a71d7210" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://desplugada.ime.unicamp.br/atividade2/index.html">Solução e descritivo</a></li></ul></div></details><details id="359eb69e-4e65-8086-9d1e-f261cbd040cd" open="" class="toggle" dir="auto"><summary>Prender a ovelha</summary><div class="indented"><ul id="359eb69e-4e65-8011-8141-fb98a02ab3be" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Um passo por vez</li></ul><ul id="359eb69e-4e65-8070-b6e6-f2b899737c69" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.braingymmer.com/pt/brain-games/dolly/play/">Link</a></li></ul></div></details><details id="359eb69e-4e65-80ea-b554-cf58344fba9b" open="" class="toggle" dir="auto"><summary>Imagem formada por partes menores</summary><div class="indented"><ul id="359eb69e-4e65-8000-930d-c71f0803f9d8" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.braingymmer.com/pt/brain-games/fuzzle/play/">Link</a></li></ul></div></details></li></ul><ul id="359eb69e-4e65-80d7-96f5-c0b8bfddd380" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Algoritmos</strong>: Criação de uma sequência de passos (etapas) para alcançar um objetivo. É um conjunto de instruções ordenadas para a solução de um problema ou execução de uma tarefa. Escrever um receita é criar um algoritmo em que outra pessoa poderá seguir aqueles passos e chegar à mesma solução: o prato pronto para o consumo com gosto desejado.<details id="359eb69e-4e65-80d2-9ec1-f83985febc36" open="" class="toggle" dir="auto"><summary>Atividade origamis</summary><div class="indented"><ul id="359eb69e-4e65-800c-b6ec-e3b9e9e8af94" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Selecionar um conjunto de origamis, distribuir entre os alunos, um dos alunos fará as instruções e outro aluno montará o origami</li></ul></div></details><details id="359eb69e-4e65-80eb-8306-ef1d4017893d" open="" class="toggle" dir="auto"><summary>Torre de Hanoi</summary><div class="indented"><ul id="359eb69e-4e65-80f0-a5cb-f2a1e910e660" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Identificar sequência de passos para resolver o desafio</li></ul><ul id="359eb69e-4e65-8021-940f-cbaf234a2280" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://clubes.obmep.org.br/blog/torre-de-hanoi/">Site OBMEP</a></li></ul><ul id="359eb69e-4e65-809e-8bbe-c528d0899ed5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.noas.com.br/ensino-fundamental-2/matematica/torre-de-hanoi">Site NOAS (Interface melhor trabalhada)</a></li></ul></div></details><ul id="359eb69e-4e65-8039-a352-f7de1591f273" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Ordenar etapas<ul id="359eb69e-4e65-80df-82fc-c196dda5f6bf" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://atividadeseducativas.com.br/index.php?id=16322">Fora de ordem</a></li></ul></li></ul><ul id="359eb69e-4e65-8015-8ef1-dc34c483d33f" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.coquinhos.com/acender-as-lampadas/play/">Acender lâmpadas</a></li></ul><ul id="359eb69e-4e65-80f0-a2bc-dd78b26ec8cf" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.coquinhos.com/escape-3d/play/">Escape 3d</a> - Utilize as setas do teclado para chegar até o quadrado indicado</li></ul><ul id="359eb69e-4e65-80ec-8d50-f620acc5fec1" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.mindgames.com/game/Daily+Traffic+Jam">Traffic Jam</a> - Mova os carros clicando e arrastando com o mouse</li></ul><ul id="359eb69e-4e65-8017-a016-e7206d386bc2" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.puzzlesociety.com/logic-puzzles/switch-spots/how-to-play-switch-spots">Switch Spots - Deixe todas oc circulos no mesmo tom utilizando as setas externas</a></li></ul><ul id="359eb69e-4e65-80e8-9263-f3a6c712be7a" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://figure.game/">Figure - Conseguir remover todos os quadrados</a></li></ul><ul id="359eb69e-4e65-80c9-9e49-e1f71a5413e3" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Montagem do Cubo Mágico<ul id="359eb69e-4e65-80d6-848d-c8f4638b908c" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://www.youtube.com/watch?v=HrYofLLCOq8&amp;list=PLtSzHBslTv7ZsAlhaFndKCVynG3fnkOL9">Algoritmo em vídeo</a></li></ul><ul id="359eb69e-4e65-8043-8a4e-c8256e93ed9c" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://docs.google.com/presentation/d/1lKnxK-8-gqhyTqmZCcYx0oBQ4AHw68XNrrC848YiyG0/edit?usp=sharing">Slides</a></li></ul></li></ul><ul id="359eb69e-4e65-80ca-ac5c-d0459c533c23" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Atividade Steam4You<ul id="359eb69e-4e65-80e4-b64d-e5436b79d19e" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://steam4kids.com.br/2019/06/13/atividade-para-criancas-meu-primeiro-algoritmo/">Meu Primeiro Algoritmo</a></li></ul></li></ul><ul id="359eb69e-4e65-8023-9ef4-d6b7dff6b15d" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Entender melhor encadeamento de for<ul id="359eb69e-4e65-8053-96a4-f7e9d066534b" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://compute-it.toxicode.fr/">https://compute-it.toxicode.fr/</a></li></ul></li></ul></li></ul></div></details><details id="310eb69e-4e65-81ec-b85c-deef44c0fd78" open="" class="block-color-blue_background toggle" data-notion-highlight="blue_background" dir="auto"><summary>🙅🏽‍♂️ Abordagens Pedagógicas</summary><div class="indented"><details id="310eb69e-4e65-8155-ac20-effc2209b8e0" open="" class="toggle" dir="auto"><summary>GBL</summary><div class="indented"><details id="369eb69e-4e65-801d-b734-e2d7f93e2359" open="" class="toggle" dir="auto"><summary>Distinções entre Tipos de Ensino e Aprendizagem usando Jogos</summary><div class="indented"><ul id="3b4eb69e-4e65-808f-815f-c49ec920a70f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://openup.uni-potsdam.de/pluginfile.php/206056/mod_label/intro/Becker2021.pdf">What’s the difference between gamification, serious games, educational games, and game-based learning?</a></li></ul><details id="369eb69e-4e65-8037-bde1-ce3076deb1d1" open="" class="toggle" dir="auto"><summary>Tabela em inglês</summary><div class="indented"><table id="3b4eb69e-4e65-80c4-b163-c4770585a191" class="simple-table" dir="ltr"><tbody><tr id="3b4eb69e-4e65-808d-957b-edfd5b2486a7" dir="ltr"><td id="gndV" class=""><strong>Critério</strong></td><td id="gCKW" class=""><strong>Game</strong></td><td id="nWGr" class=""><strong>Serious Game</strong></td><td id="oYqz" class=""><strong>Game for Learning (G4L)</strong></td><td id="lbOH" class=""><strong>Game-Based Learning (GBL)</strong></td><td id="Y}HY" class=""><strong>Game-Based Pedagogy (GBP)</strong></td><td id="\@&lt;g" class=""><strong>Gamification</strong></td></tr><tr id="3b4eb69e-4e65-80dd-9593-ed3b8f9ac706" dir="ltr"><td id="gndV" class="">Basic Definition</td><td id="gCKW" class="">This term includes BOTH Serious Games AND Games for Learning.</td><td id="nWGr" class="">A game designed for purposes other than or in addition to pure entertainment.</td><td id="oYqz" class="">A game designed specifically with some learning goals in mind.</td><td id="lbOH" class="">The process and practice of learning using games. (From the learner&#x27;s point of view).</td><td id="Y}HY" class="">The process and practice of teaching using games. (From the teacher&#x27;s point of view).</td><td id="\@&lt;g" class="">The use of game elements in a non-game context.</td></tr><tr id="3b4eb69e-4e65-8093-aebc-de672acf1aea" dir="ltr"><td id="gndV" class="">Purpose</td><td id="gCKW" class="">Can be for any purpose.</td><td id="nWGr" class="">Change in behaviour, attitude, health, understanding, knowledge.</td><td id="oYqz" class="">Normally connected with some educational goals.</td><td id="lbOH" class="">Not a game – this is an approach to learning.</td><td id="Y}HY" class="">Not a game – this is an approach to teaching.</td><td id="\@&lt;g" class="">Often used to drive motivation, but can also be used to make something more playful and game-like.</td></tr><tr id="3b4eb69e-4e65-80cb-b820-cc94a2b75b87" dir="ltr"><td id="gndV" class="">Primary Driver (why used)</td><td id="gCKW" class="">Can be either play or rewards (or both).</td><td id="nWGr" class="">To get the message of the game.</td><td id="oYqz" class="">To learn something.</td><td id="lbOH" class="">To improve learning. To increase learning effectiveness. Note: GBP &amp; GPL are related, but not the same.</td><td id="Y}HY" class="">To improve teaching practice &amp; effectiveness. Note: GBP &amp; GPL are related. They are like two sides of a single coin.</td><td id="\@&lt;g" class="">Depending on how it is implemented, it can tap into extrinsic or intrinsic rewards (or both).</td></tr><tr id="3b4eb69e-4e65-802e-9314-ce578cc08d09" dir="ltr"><td id="gndV" class="">Key Question</td><td id="gCKW" class="">Is it fun?</td><td id="nWGr" class="">Is the message being received?</td><td id="oYqz" class="">Is it effective?</td><td id="lbOH" class="">Am I learning what I am supposed / need to be learning?</td><td id="Y}HY" class="">Is it effective?</td><td id="\@&lt;g" class="">Business: Does it improve profits? Education: Is it effective?</td></tr><tr id="3b4eb69e-4e65-80ec-84f6-de5508387fe0" dir="ltr"><td id="gndV" class="">Focus</td><td id="gCKW" class="">Player Experience (how)</td><td id="nWGr" class="">Content / Message (what)</td><td id="oYqz" class="">Content / Message (what)</td><td id="lbOH" class="">Learning Objectives (what &amp; how)</td><td id="Y}HY" class="">Learning Objectives (what &amp; how)</td><td id="\@&lt;g" class="">User Experience (how)</td></tr><tr id="3b4eb69e-4e65-80ab-b1ee-f9b9b0918e12" dir="ltr"><td id="gndV" class="">Budgets</td><td id="gCKW" class="">Next to nothing to 100&#x27;s of millions.</td><td id="nWGr" class="">Next to nothing to 100&#x27;s of thousands.</td><td id="oYqz" class="">Next to nothing to 100&#x27;s of thousands.</td><td id="lbOH" class="">Usually part of an institutional budget. Largely irrelevant to the user.</td><td id="Y}HY" class="">Usually part of an institutional budget. Largely irrelevant to the user.</td><td id="\@&lt;g" class="">Next to nothing to 10&#x27;s of thousands.</td></tr><tr id="3b4eb69e-4e65-80c1-b507-e89a9f862f30" dir="ltr"><td id="gndV" class="">Business Model</td><td id="gCKW" class="">User Pays</td><td id="nWGr" class="">Producer Pays</td><td id="oYqz" class="">Varies</td><td id="lbOH" class="">Institution Pays</td><td id="Y}HY" class="">Institution Pays</td><td id="\@&lt;g" class="">Producer Pays</td></tr><tr id="3b4eb69e-4e65-8066-b59f-de65ce571fed" dir="ltr"><td id="gndV" class="">Concept Catalyst</td><td id="gCKW" class="">Core Amusement.</td><td id="nWGr" class="">Message.</td><td id="oYqz" class="">Performance or Knowledge Gap.</td><td id="lbOH" class="">Game is the lesson or is used as a part of the lesson.</td><td id="Y}HY" class="">Game is the lesson or is used as a part of the lesson.</td><td id="\@&lt;g" class="">When used in learning it usually impacts HOW things are taught and administrated rather than WHAT is taught.</td></tr><tr id="3b4eb69e-4e65-80bc-8970-e99c0cb8390d" dir="ltr"><td id="gndV" class="">Fidelity</td><td id="gCKW" class="">Self-consistent, otherwise irrelevant.</td><td id="nWGr" class="">Faithfulness to message essential.</td><td id="oYqz" class="">Faithfulness to message essential.</td><td id="lbOH" class="">Faithfulness to message essential.</td><td id="Y}HY" class="">Faithfulness to message essential.</td><td id="\@&lt;g" class="">Not Applicable. If a narrative exists, it need have nothing to do with what&#x27;s being gamified.</td></tr></tbody></table></div></details><details id="369eb69e-4e65-8066-8fda-ccdd059405bb" open="" class="toggle" dir="auto"><summary>Tabela Traduzida</summary><div class="indented"><table id="369eb69e-4e65-8005-a9a3-de15225e3df1" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="369eb69e-4e65-803b-b860-ea245cef16f5" dir="ltr"><th id="Tf@j" class="simple-table-header-color simple-table-header"></th><th id="tCYE" class="simple-table-header-color simple-table-header"><strong>Jogo</strong></th><th id="|:sR" class="simple-table-header-color simple-table-header"><strong>Jogo Sério (Serious Game)</strong></th><th id="OnYA" class="simple-table-header-color simple-table-header"><strong>Jogo para Aprendizagem (G4L)</strong></th><th id="BunB" class="simple-table-header-color simple-table-header"><strong>Aprendizagem Baseada em Jogos (GBL)</strong></th><th id="dohs" class="simple-table-header-color simple-table-header"><strong>Pedagogia Baseada em Jogos (GBP)</strong></th><th id="i:_k" class="simple-table-header-color simple-table-header"><strong>Gamificação</strong></th></tr></thead><tbody><tr id="369eb69e-4e65-80fc-9576-fd4cf1faf881" dir="ltr"><td id="Tf@j" class=""><strong>Definição Básica</strong></td><td id="tCYE" class="">Este termo inclui tanto Jogos Sérios quanto Jogos para Aprendizagem.</td><td id="|:sR" class="">Um jogo projetado para finalidades além ou além do puro entretenimento.</td><td id="OnYA" class="">Um jogo projetado especificamente com alguns objetivos de aprendizagem em mente.</td><td id="BunB" class="">O processo e a prática de aprender usando jogos. (Do ponto de vista do aprendiz)</td><td id="dohs" class="">O processo e a prática de ensinar usando jogos. (Do ponto de vista do professor)</td><td id="i:_k" class="">O uso de elementos de jogos em um contexto que não é um jogo.</td></tr><tr id="369eb69e-4e65-8023-93db-ebe268a71ff2" dir="ltr"><td id="Tf@j" class=""><strong>Propósito</strong></td><td id="tCYE" class="">Pode servir para qualquer finalidade.</td><td id="|:sR" class="">Mudança de comportamento, atitude, saúde, compreensão ou conhecimento.</td><td id="OnYA" class="">Normalmente conectado a alguns objetivos educacionais.</td><td id="BunB" class="">Não é um jogo — é uma abordagem de aprendizagem.</td><td id="dohs" class="">Não é um jogo — é uma abordagem de ensino.</td><td id="i:_k" class="">Frequentemente usada para motivar, mas também pode tornar algo mais lúdico e semelhante a um jogo.</td></tr><tr id="369eb69e-4e65-8061-9e8c-c5fed60f53db" dir="ltr"><td id="Tf@j" class=""><strong>Motivação Principal (por que é usado)</strong></td><td id="tCYE" class="">Pode ser diversão, recompensas ou ambos.</td><td id="|:sR" class="">Fazer com que a mensagem do jogo seja compreendida.</td><td id="OnYA" class="">Aprender algo.</td><td id="BunB" class="">Melhorar a aprendizagem e aumentar sua efetividade.</td><td id="dohs" class="">Melhorar a prática pedagógica e sua efetividade.</td><td id="i:_k" class="">Dependendo da implementação, pode recorrer a recompensas extrínsecas, intrínsecas ou ambas.</td></tr><tr id="369eb69e-4e65-8034-95ec-ccad1d8823b6" dir="ltr"><td id="Tf@j" class=""><strong>Pergunta-chave</strong></td><td id="tCYE" class="">É divertido?</td><td id="|:sR" class="">A mensagem está sendo recebida?</td><td id="OnYA" class="">É eficaz?</td><td id="BunB" class="">Estou aprendendo o que deveria/apreciso aprender?</td><td id="dohs" class="">É eficaz?</td><td id="i:_k" class="">Negócios: melhora os lucros? Educação: é eficaz?</td></tr><tr id="369eb69e-4e65-80fa-ab91-c4658d0f944a" dir="ltr"><td id="Tf@j" class=""><strong>Foco</strong></td><td id="tCYE" class="">Experiência do jogador (como).</td><td id="|:sR" class="">Conteúdo / mensagem (o quê).</td><td id="OnYA" class="">Conteúdo / mensagem (o quê).</td><td id="BunB" class="">Objetivos de aprendizagem (o quê e como).</td><td id="dohs" class="">Objetivos de aprendizagem (o quê e como).</td><td id="i:_k" class="">Experiência do usuário (como).</td></tr><tr id="369eb69e-4e65-8060-b9cd-de494059f569" dir="ltr"><td id="Tf@j" class=""><strong>Orçamento</strong></td><td id="tCYE" class="">De quase nada até centenas de milhões.</td><td id="|:sR" class="">De quase nada até centenas de milhares.</td><td id="OnYA" class="">De quase nada até centenas de milhares.</td><td id="BunB" class="">Geralmente parte de um orçamento institucional. Em grande parte irrelevante para o usuário.</td><td id="dohs" class="">Geralmente parte de um orçamento institucional. Em grande parte irrelevante para o usuário.</td><td id="i:_k" class="">De quase nada até dezenas de milhares.</td></tr><tr id="369eb69e-4e65-80b4-b8e6-f9d1be69c634" dir="ltr"><td id="Tf@j" class=""><strong>Modelo de Negócio</strong></td><td id="tCYE" class="">Usuário paga.</td><td id="|:sR" class="">Produtor paga.</td><td id="OnYA" class="">Varia.</td><td id="BunB" class="">Instituição paga.</td><td id="dohs" class="">Instituição paga.</td><td id="i:_k" class="">Produtor paga.</td></tr><tr id="369eb69e-4e65-80cc-9f3e-eff79854e5c8" dir="ltr"><td id="Tf@j" class=""><strong>Elemento Catalisador do Conceito</strong></td><td id="tCYE" class="">Diversão central.</td><td id="|:sR" class="">Mensagem.</td><td id="OnYA" class="">Lacuna de desempenho ou conhecimento.</td><td id="BunB" class="">O jogo é a lição ou faz parte dela.</td><td id="dohs" class="">O jogo é a lição ou faz parte dela.</td><td id="i:_k" class="">Quando usada na aprendizagem, geralmente impacta COMO as coisas são ensinadas e administradas, em vez do QUE é ensinado.</td></tr><tr id="369eb69e-4e65-8074-9965-fa8763818f51" dir="ltr"><td id="Tf@j" class=""><strong>Fidelidade</strong></td><td id="tCYE" class="">Deve ser autoconsistente; fora isso, é irrelevante.</td><td id="|:sR" class="">Fidelidade à mensagem é essencial.</td><td id="OnYA" class="">Fidelidade à mensagem é essencial.</td><td id="BunB" class="">Fidelidade à mensagem é essencial.</td><td id="dohs" class="">Fidelidade à mensagem é essencial.</td><td id="i:_k" class="">Não aplicável. Se existir narrativa, ela não precisa ter relação com o que está sendo gamificado.</td></tr></tbody></table></div></details></div></details><details id="310eb69e-4e65-81b7-88c5-c7952c3ad5cd" open="" class="toggle" dir="auto"><summary>Exemplos</summary><div class="indented"><ul id="310eb69e-4e65-81b3-8eff-fd0643e432c9" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://forms.gle/D24YCkqHysorXP5M8">Scape Room</a></li></ul><ul id="35beb69e-4e65-806b-bbee-e2742c0734f6" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Jogos Online<ul id="35beb69e-4e65-803c-8e01-c4fe092e8a5c" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://conexo.ws/pt/">Jogo Conexo</a></li></ul><ul id="35deb69e-4e65-8071-833a-d4b90793aaab" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Dixit</li></ul><ul id="35beb69e-4e65-8008-ba8b-e8422da6165c" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://smart-games.org/en/set/">SET</a></li></ul><ul id="35beb69e-4e65-80f7-bfbe-d45c788382fa" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://studio.code.org/hoc/9?lang=pt-BR">Studio Hora do Código</a> - <a href="https://blockly.games/maze?lang=pt-br">Blockly</a> - </li></ul><ul id="35beb69e-4e65-801a-b9c7-fb6f7e1b6661" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.mindgames.com/game/Daily+Traffic+Jam">Traffic Jam</a></li></ul></li></ul><ul id="310eb69e-4e65-8196-a177-cbf2805fdb3a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Jogos de tabuleiro moderno<ul id="310eb69e-4e65-8167-b218-dc7357683ca3" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://boardgamegeek.com/boardgame/351155/recto-verso">Recto Verso</a></li></ul><details id="310eb69e-4e65-81db-b202-d8d111ab742c" open="" class="toggle" dir="auto"><summary>EDITORAS</summary><div class="indented"><ul id="310eb69e-4e65-818e-a35f-ee75707fb17f" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://jogos.papergames.com.br/sala?utm_campaign=email_mkt_-_jungo_t1__lux_nova_t1__papergames_sala_-_lancamento_revendedores&amp;utm_medium=email&amp;utm_source=rd+station&amp;fbclid=PAZXh0bgNhZW0CMTEAAaasfFXcmfbuYkR5FBY9YZtN9Q1-CocQgPgh8CEStcOApghIwdhNjIeVKBU_aem_C6xXTJOjN8eY36nxu7TkuQ">PaperGames SALA</a></li></ul><ul id="310eb69e-4e65-81c6-87d0-fac832b5a5bf" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://devir.com.br/escolas/">DEVIR Escolas</a></li></ul><ul id="310eb69e-4e65-81b0-a3ab-cbf353c6a039" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://asmodee.mundogalapagos.com.br/minuto-educacao"> </a></li></ul></div></details><details id="310eb69e-4e65-8154-8848-dcac9d494ff1" open="" class="toggle" dir="auto"><summary>ONLINE</summary><div class="indented"><ul id="310eb69e-4e65-814a-b028-db6ab0b45e7a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://play-tixid.online/en/">Dixit Online - Abstração</a> <a href="https://app.metafora.game/">[2]</a> <a href="https://dixit.party/">[3]</a><ul id="310eb69e-4e65-8118-a761-c28ea492d4ca" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://youtu.be/NnFFqy-rzxg?si=pus8z9hNMIVftVIP&amp;t=24">Vídeo de Regras</a></li></ul></li></ul><ul id="310eb69e-4e65-8167-af97-e37594831ef7" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://catanuniverse.com/en/game/">Catan</a></li></ul><ul id="310eb69e-4e65-81f6-a7c0-d335cb7ba6f2" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://codenamesapp.com/#faq">Codenomes</a> Aplicativos<ul id="310eb69e-4e65-8178-aa88-ef78344743c2" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://codenames.game/">Abrir sala</a></li></ul></li></ul><ul id="310eb69e-4e65-8100-a7a2-e9f71e07daa0" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://boardgamearena.com/">BGA</a></li></ul></div></details><details id="310eb69e-4e65-81dd-8dec-e93cba65d270" open="" class="toggle" dir="auto"><summary>PRINT AND PLAY</summary><div class="indented"><ul id="310eb69e-4e65-8174-b7ed-d00bba0423f3" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://blueorangegames.eu/en/resources/activities/">Blue Orange</a><ul id="310eb69e-4e65-817d-8899-e8f10a4e48d2" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://blueorangegames.eu/wp-content/uploads/2020/04/Kingdomino-Free-Sample-EN.pdf">KingDomino</a><ul id="310eb69e-4e65-81cc-a88b-e51f7b822a9b" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://blueorangegames.eu/wp-content/uploads/2020/04/Kingdomino-Free-Sample-EN.pdf">Amostra do jogo</a></li></ul><ul id="310eb69e-4e65-81c6-a292-ef80d585738c" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://youtu.be/kjVNPYnNMKs?si=_M3Qj-MResHeLLH0&amp;t=78">Vídeo do Jogo</a></li></ul><ul id="310eb69e-4e65-8114-8212-fbb8c5184304" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://papergames.com.br/kingdomino/">Site da editora Br</a> - <a href="https://onedrive.live.com/?authkey=%21AN4nnWX5RkrpAZM&amp;id=C904BC258D7022E4%21732185&amp;cid=C904BC258D7022E4&amp;parId=root&amp;parQt=sharedby&amp;o=OneUp">Manual do jogo</a></li></ul><ul id="310eb69e-4e65-815e-a22a-ce704335765c" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://boardgamearena.com/gamepanel?game=kingdomino">BG</a>A</li></ul></li></ul><ul id="310eb69e-4e65-8121-a256-d9a4a394969c" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Entrelinhas<ul id="310eb69e-4e65-812e-b4d0-f25e75cce92b" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://blueorangegames.eu/wp-content/uploads/2021/02/CrossClues-PnP-EN.pdf">Amostra do jogo</a></li></ul><ul id="310eb69e-4e65-81a0-92d5-d37db152daec" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://www.youtube.com/watch?v=TIS2SjtT79o">Vídeo de Regras</a></li></ul></li></ul></li></ul><ul id="310eb69e-4e65-81c8-ab15-c63bd1e215ae" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.thamesandkosmos.com/index.php/educators">Kosmos</a><ul id="310eb69e-4e65-8156-b649-da0db68f9f05" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Ubongo<ul id="310eb69e-4e65-813d-b8ed-f1bfe29063bd" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://www.thamesandkosmos.com/index.php/educators/scienceathome/item/ubongo-demo">Arquivos</a></li></ul><ul id="310eb69e-4e65-81df-a28c-ddf79a5354c4" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://thamesandkosmos.com/images/tip_sheets/Ubongo_Teacher_Tip_Sheet.pdf">Habilidades</a></li></ul></li></ul></li></ul><ul id="310eb69e-4e65-81a0-89c8-c4507a8a587b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://print-and-play.asmodee.fun/en/all/games">Asmodee</a><ul id="310eb69e-4e65-8194-a3d4-c28c15647d22" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://protected-downloads-pnp.asmodee.fun/prd/linkto/matchup_linkto_pnp_en.pdf?Expires=1728774647&amp;Signature=nRd24~eciLn2JB~M~EwKxAKEN9Qwv5cq~hW-204Xsdw~cwYbEuW36xKZ9bkDhHquqCchZKsHDHzlJOyMHs9ctI4H2GjkCViK36m26CCbRAiScHsvt3xUD6IqUyZUjLzWnFgqkz1D~NnCUlTs1ao2iRv3KmMd9wBJ1srIKkU1DdfsOne-dpKs5HShLYglzjajuAUadMSuBKRjC0MpWh8YKyOPb4dVhdEuGaS41GpEan3WNp76L9XPc2ybe~nfUU~j4A6HT3VXZmktMg6lCF4IWTj1KXS3SxFJ6N-oclZF1xMXdGLYdVQPI5ORgcp6f65jsRLAVS4w70r1hFBBLZR5zQ__&amp;Key-Pair-Id=K3HFEWD944DUN8">Match Up</a></li></ul><ul id="310eb69e-4e65-8132-a3f3-ff17e30d8507" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://rdstation-static.s3.amazonaws.com/cms%2Ffiles%2F80482%2F1586368866pdfjoiner_4.pdf">Dixit</a></li></ul><ul id="310eb69e-4e65-8131-93a6-ccc8faa6b699" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://protected-downloads-pnp.asmodee.fun/prd/dobble/dobble_demokit_en.pdf?Expires=1728787938&amp;Signature=AVd-LzE5WehI~A3NyvjitQLol2LiuLaaRZMwpudc6Abf35l2h6sFg2ra1GF19HUSoNY8FtUhPa06tDONbS6Apll7YlgULEUc859jb0JXalgQqbWl8F19d~vyMovj5FketuwXf-757Ic4j6NYnEqVZ9mcNoz0MEneyeQ0t-gmahhAA6gvzO~Uz0-MAjKdMf2IwHPLHy~nV1wsT7Zp2jnXL5pxdEDWWgWn4PIFTwuyFGVF7KmcU7bGx77fQUM1woZoC0FS~OAqvaz~FSrM6Od3mVj1oJTgP3uuUUjFnqkCniXixmoB9VqzTkuE-7pDPrylzboSQbLpTpw1rSXSIZGwAQ__&amp;Key-Pair-Id=K3HFEWD944DUN8">Dobble</a></li></ul></li></ul><ul id="310eb69e-4e65-8117-82af-cd7ae03f6157" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://asmodee.mundogalapagos.com.br/imprima-e-jogue">Galápagos</a><ul id="310eb69e-4e65-81d0-bec7-e94b4d557833" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://rdstation-static.s3.amazonaws.com/cms%2Ffiles%2F80482%2F1584979054SET_Demo.pdf">SET</a></li></ul><ul id="310eb69e-4e65-8115-b890-f58605ce9ef4" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://rdstation-static.s3.amazonaws.com/cms%2Ffiles%2F80482%2F1584978772TML_Demo_1.pdf">TimeLine</a></li></ul></li></ul><ul id="310eb69e-4e65-819d-8444-e35c6a9ed8fc" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://devir.com.br/escolas/">DEVIR</a></li></ul><ul id="310eb69e-4e65-815b-a4ec-c506b672f4f2" class="bulleted-list" dir="auto"><li style="list-style-type:disc"></li></ul></div></details></li></ul></div></details></div></details><details id="310eb69e-4e65-81df-952b-dd52db610f6e" open="" class="toggle" dir="auto"><summary>Aprendizagem baseada em problemas</summary><div class="indented"></div></details><details id="310eb69e-4e65-815a-a380-f9cc83cfc730" open="" class="toggle" dir="auto"><summary>Aprendizagem baseada em casos</summary><div class="indented"></div></details></div></details><details id="310eb69e-4e65-81b1-83cb-e5b66c5af7a9" open="" class="block-color-blue_background toggle" data-notion-highlight="blue_background" dir="auto"><summary>🧩 <strong>Atividade</strong></summary><div class="indented"><ul id="310eb69e-4e65-81d6-97ea-c5c1f615c9a1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Usando conhecimentos sobre busca em bases acadêmicas, cada professor deverá procurar uma publicação que apresente uma estratégia, recurso ou metodologia para trabalhar o Pensamento Computacional (PC) na sala de aula. No processo de busca, a recomendação é que o professor selecione o artigo pela análise do título, palavras-chave e resumo, e depois proceda com a leitura integral. Deve-se identificar no artigo o Gap/lacuna, objetivos e contribuições/resultados. Essas informações precisam ser registradas na apresentação de slides coletiva para posterior socialização com a turma. Ao final, cada professor também deve indicar como aplicaria/utilizaria o que é apresentado pelo trabalho em sua prática pedagógica/aula.</li></ul><ul id="310eb69e-4e65-813e-9ba7-c650fb40703c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">ATIVIDADES GERAIS</li></ul></div></details><details id="310eb69e-4e65-8157-b001-d44094d908d4" open="" class="block-color-blue_background toggle" data-notion-highlight="blue_background" dir="auto"><summary><strong>MATERIAL COMPLEMENTAR</strong></summary><div class="indented"><ul id="310eb69e-4e65-8169-a70a-eeb008858465" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Repositórios de atividades<ul id="310eb69e-4e65-81b4-b9b3-f4506747e95c" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>GERAL</strong><ul id="310eb69e-4e65-8156-8366-cb48701b940e" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://www.computacional.com.br/#atividades">Computacional</a></li></ul><ul id="310eb69e-4e65-819d-a760-e9ee57d10624" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://curriculo.cieb.net.br/curriculo">Currículo CIEB</a><ul id="310eb69e-4e65-812e-afc8-fe29fdc6bc96" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Marca PC depois o eixo</li></ul></li></ul><ul id="310eb69e-4e65-8171-bfdc-f4082b35cbb2" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://codeweek.eu/training">CodeWeek</a></li></ul><ul id="310eb69e-4e65-81d3-ab2e-ef4513299298" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://sites.google.com/view/tecnologia-inovacao-bc/in%C3%ADcio">Repositório de Atividades - Computação - Balneário Camburiú</a></li></ul></li></ul><ul id="310eb69e-4e65-812a-9e6c-c2a8607eca69" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>Atividades PLUGADAS</strong><ul id="310eb69e-4e65-8188-b5d7-f64b2a29772e" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://studio.code.org/catalog">Atividades Code.org</a></li></ul><ul id="310eb69e-4e65-814b-85aa-ce3f6534cf72" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://code.org/curriculum/course3/1/Activity1-ComputationalThinking.pdf">CT</a></li></ul><ul id="310eb69e-4e65-817a-bd70-cd6c40117722" class="bulleted-list" dir="auto"><li style="list-style-type:square">A hora do código<ul id="310eb69e-4e65-8154-9c0d-e9d697c09e89" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://code.org/hourofcode">Code.org</a></li></ul><ul id="310eb69e-4e65-8101-acea-f88288e58071" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://hourofcode.com/br/learn">Site próprio</a></li></ul></li></ul><ul id="310eb69e-4e65-81f7-b32f-cb74dd5c47e9" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://codingthailand.org/">Site da Thailândia</a><ul id="310eb69e-4e65-81db-b5c8-dffdbea758ea" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Curadoria de atividade</li></ul></li></ul></li></ul><ul id="310eb69e-4e65-816b-a6bf-f273b1af343e" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><strong>Atividades DESPLUGADAS</strong><ul id="310eb69e-4e65-8183-a0e3-eda0f4d6b09b" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://desplugada.ime.unicamp.br/atividades.html">Computação desplugada - IME - Unicamp</a></li></ul><ul id="310eb69e-4e65-81b3-aad7-fba23459edb1" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://liag.ft.unicamp.br/computacaocriativa/oficina-atividades-desplugadas/">Computação Criativa</a></li></ul><ul id="310eb69e-4e65-81fa-9fa2-f089f236d276" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://code.org/curriculum/unplugged">Code.org Unplugged</a></li></ul><ul id="310eb69e-4e65-81be-a716-f8b08ccc8a0a" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://www.cs4fn.org/">CSForFun</a></li></ul><ul id="310eb69e-4e65-8199-a071-ed7d30b41246" class="bulleted-list" dir="auto"><li style="list-style-type:square">CSUnplugged<ul id="310eb69e-4e65-8104-9997-c96920957f5a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://classic.csunplugged.org/books/">Livro</a></li></ul><ul id="310eb69e-4e65-8112-a7e9-cf2ef10d3114" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://classic.csunplugged.org/documents/books/portuguese/CSUnpluggedTeachers-portuguese-brazil-feb-2011.pdf">Tradução</a></li></ul></li></ul><ul id="310eb69e-4e65-81e8-9aac-ec6e5b1dbe08" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://educacao.jundiai.sp.gov.br/publicacoes/e-books/">E-books Experiências (Des)Conectadas e Divertidas</a></li></ul></li></ul></li></ul><ul id="310eb69e-4e65-8147-bb13-db4becfb6b0c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Planos de aula<ul id="310eb69e-4e65-811e-9e15-ebce97ab0179" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.fundacaotelefonicavivo.org.br/wp-content/uploads/pdfs/Ebook_Pensamento_Computacional_em_sala_de_aula_Santa_Catarina.pdf">Pensamento Computacional na Sala de Aula: Uma Realidade em Santa Catarina!</a></li></ul></li></ul><ul id="310eb69e-4e65-81d2-96f0-ea52245266c9" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Literatura<ul id="310eb69e-4e65-811e-b683-cab1bbb7bded" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://lume.ufrgs.br/handle/10183/197566">Pensamento computacional : revisão bibliográfica</a></li></ul><ul id="310eb69e-4e65-812b-a400-c48842efb64c" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Computação Desplugada<ul id="310eb69e-4e65-8135-bd1c-ca2ad67531e0" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://classic.csunplugged.org/documents/books/portuguese/CSUnpluggedTeachers-portuguese-brazil-feb-2011.pdf">Livro: COMPUTER SCIENCE - Unplugged - Tradução: Luciano Porto Barreto</a></li></ul><ul id="310eb69e-4e65-8141-8204-c5384318ea34" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://constructivist.info/14/3/342.bell">Constructing Computational Thinking Without Using Computers</a></li></ul><ul id="310eb69e-4e65-8148-a436-dda7d1f08bdb" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://link.springer.com/article/10.1007/s11528-019-00410-5">Unplugged Approaches to Computational Thinking: a Historical Perspective</a></li></ul><ul id="310eb69e-4e65-818b-b05b-e1cd73fb8a2d" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://journals.sagepub.com/doi/full/10.1177/00472395211018801?journalCode=etsa">Computer Science Unplugged: A Systematic Literature Review</a></li></ul></li></ul><ul id="310eb69e-4e65-81f3-8f11-fe571bc2d104" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Material didático<ul id="310eb69e-4e65-8181-b8ac-f1f920f685f9" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://sites.google.com/view/computacaofundamental/home">Computação no ensino fundamental</a> [<a href="https://www.researchgate.net/profile/Roberto-Bittencourt-2/publication/352831937_Computacao_Fundamental_Curriculo_e_Livros_Didaticos_de_Computacao_para_o_Ensino_Fundamental_II/links/60db806ea6fdccb745f40d4b/Computacao-Fundamental-Curriculo-e-Livros-Didaticos-de-Computacao-para-o-Ensino-Fundamental-II.pdf">2</a>]</li></ul><ul id="310eb69e-4e65-8130-9209-ef3941e85b08" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://educacao.jundiai.sp.gov.br/wp-content/uploads/2023/11/3o-Pensamento-Computacional.pdf">Experiências (Des)conectadas e Divertidas no Programa Escola Inovadora: Pensamento Computacional, Mundo Digital e Cultura Digital</a></li></ul></li></ul></li></ul></div></details><details id="310eb69e-4e65-8189-8eef-e95944e9c9da" open="" class="block-color-blue_background toggle" data-notion-highlight="blue_background" dir="auto"><summary><strong>MATERIAL COMPLEMENTAR</strong></summary><div class="indented"><ul id="310eb69e-4e65-8162-9e92-dd16a1178918" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Material para estudo - Cursos para professores<ul id="310eb69e-4e65-8149-8271-e59ce0f0b5fc" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://wydawnictwo.wsei.eu/wp-content/uploads/2024/02/COMPUTATIONAL-THINKING.pdf">COMPUTATIONAL THINKING FOR TEACHERS AND CLASSES</a></li></ul></li></ul><ul id="310eb69e-4e65-81ef-9397-eb5b0bf326b5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Material de Apoio para professores<ul id="310eb69e-4e65-8161-b1bb-e4cf375c4bc7" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Inglês<ul id="310eb69e-4e65-8154-abc5-da55c6f84235" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://eprints.soton.ac.uk/424545/1/150818_Computational_Thinking_1_.pdf">Computational thinking - A guide for teachers</a> <a href="https://eprints.soton.ac.uk/424545/">\[2\]</a> <a href="https://www.computingatschool.org.uk/resource-library/2014/june/cas-computational-thinking-a-guide-for-teachers">\[3\]</a></li></ul><ul id="310eb69e-4e65-8149-aebe-e7c54b340957" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://oasis.col.org/colserver/api/core/bitstreams/4bc4b265-d1a2-4f16-a591-5609ea087f5b/content">Computational Thinking for Teachers - Commonwealth of Learning (COL)</a></li></ul><ul id="310eb69e-4e65-815f-a3ea-dd16319fd72f" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="http://code.intef.es/wp-content/uploads/2017/10/ct-teacher-resources_2ed-pdf.pdf">Computational Thinking in K–12 Education teacher resources second edition</a></li></ul><ul id="310eb69e-4e65-81a9-b0aa-f7252c24d83b" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://royalsociety.org/~/media/education/computing-in-schools/2012-01-12-computing-in-schools.pdf">Shut down or restart? The way forward for computing in UK schools</a></li></ul></li></ul><ul id="310eb69e-4e65-81c8-ab2c-cd4ee1f0ca22" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Português<ul id="310eb69e-4e65-81e8-aced-c0ca040ac8cb" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://datastudio.google.com/reporting/de2de6eb-aa11-4375-b7d4-3106e8e6f1bc/page/AoyvC?s=ozgg6E-3gqU">Kit Produtividade Docente (KPD)</a></li></ul><ul id="310eb69e-4e65-8187-b4a1-db5a00df30ce" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://drive.google.com/drive/u/0/folders/1kgUNl8LZygFD6MxM43IDKIBXcxX8YHbC">01. Educação Tecnológica e Midiática (FBT)</a></li></ul><ul id="310eb69e-4e65-8190-90b2-f964331a41ba" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://pragmatha.com.br/?s=desplugada">Coleção Desplugada</a></li></ul></li></ul></li></ul><ul id="310eb69e-4e65-814a-855e-faca57790646" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Material Didático<ul id="310eb69e-4e65-81ff-939b-e71d4662fb23" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://fundacaotelefonicavivo.org.br/acervo/pensamento-computacional-programae/">Um Guia para Construção do Pensamento Computacional</a><ul id="310eb69e-4e65-8127-9e76-fa3fa1cddeb5" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://fundacaotelefonicavivo.org.br/wp-content/uploads/pdfs/Guia_Final_06_09_2018.pdf">Guia</a></li></ul><ul id="310eb69e-4e65-81f2-8d44-db176918367b" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://fundacaotelefonicavivo.org.br/wp-content/uploads/pdfs/Caderno1_Pensamento%20Computacional_FINAL.pdf">PENSAMENTO COMPUTACIONAL - Quando vemos lógica computacional na solução dos problemas do dia a dia.</a></li></ul><ul id="310eb69e-4e65-816e-8560-dde3c268cd80" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://www.falecomrozelma.com/materiaisdidaticos">Materiais Didáticos</a></li></ul></li></ul></li></ul></div></details><p id="310eb69e-4e65-816c-942e-d181422173ab" class="" dir="auto">
+</p></div></details><details open="" class="block-color-red_background" data-notion-highlight="red_background" dir="auto"><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0"><h2 id="310eb69e-4e65-819c-b754-d993b7e7197b" style="display:inline-block">💻 Módulo 4: Ampliação de Repertório/Horizontes</h2></summary><div class="indented"><details id="310eb69e-4e65-8177-a6be-d8e551695e6d" open="" class="block-color-red_background toggle" data-notion-highlight="red_background" dir="auto"><summary>🔦 <strong>Estratégias de busca em bases acadêmicas</strong></summary><div class="indented"><details id="310eb69e-4e65-81c7-b4f9-f9adeba8af26" open="" class="block-color-red_background toggle" data-notion-highlight="red_background" dir="auto"><summary>Bases acadêmicas para busca de trabalhos</summary><div class="indented"><ul id="310eb69e-4e65-81a8-8a28-fe782e0a9a7d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://edubase.sbu.unicamp.br/home">Edubase</a><ul id="310eb69e-4e65-8166-bcff-d338f25fedfe" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Objetos educacionais</li></ul><ul id="310eb69e-4e65-8104-be46-fa533dcd69f2" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://educapes.capes.gov.br/bitstream/capes/743733/2/Daniel%20Redinz%20Mansur%20Produto%20Educacional.pdf">Linguagem de Programação Desplugada - Livro</a></li></ul></li></ul><details id="310eb69e-4e65-8194-9d37-fc2ee873af25" open="" class="toggle" dir="auto"><summary>Artigos</summary><div class="indented"><ul id="310eb69e-4e65-815b-8803-facf4da37abc" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://sol.sbc.org.br/index.php/indice">BIBLIOTECA DIGITAL DA SOCIEDADE BRASILEIRA DE COMPUTAÇÃO</a></li></ul><ul id="310eb69e-4e65-81ae-a2e3-dea8aeae871d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.sciencedirect.com/">ScienceDirect</a><ul id="310eb69e-4e65-81a0-a6aa-fc9daf2a3b70" class="bulleted-list" dir="auto"><li style="list-style-type:circle">String composta não funcionou<ul id="310eb69e-4e65-8124-9304-c8cb6b717dd4" class="bulleted-list" dir="auto"><li style="list-style-type:square">(&quot;computational thinking&quot; and &quot;teacher training&quot;) or (&quot;computational thinking&quot; and &quot;teacher education&quot;)</li></ul></li></ul><ul id="310eb69e-4e65-81f3-af57-de147a4f41a0" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.sciencedirect.com/search">Busca avançada</a><ul id="310eb69e-4e65-8138-8a35-c6c28b8f7144" class="bulleted-list" dir="auto"><li style="list-style-type:square">Show all fields &gt; Title, abstract or author-specified keywords</li></ul></li></ul></li></ul><ul id="310eb69e-4e65-8155-9fe5-eaad71c09572" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://eric.ed.gov/">ERIC - Education Resources Information Center</a><ul id="310eb69e-4e65-81ad-8b9d-d1cf1b4471c3" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Se o operador lógico for maiusculo não dá certo</li></ul><ul id="310eb69e-4e65-816f-aa3a-ca5b13b91cb0" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Ex de string<ul id="310eb69e-4e65-8120-a807-f384978d3862" class="bulleted-list" dir="auto"><li style="list-style-type:square">(+title:&quot;computational thinking&quot; +title:&quot;teacher education&quot;) OR (+abstract:&quot;computational thinking&quot; +abstract:&quot;teacher education&quot;)</li></ul></li></ul><ul id="310eb69e-4e65-81cb-9f7d-ede94a3f155d" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://eric.ed.gov/?advanced">https://eric.ed.gov/?advanced</a></li></ul></li></ul><ul id="310eb69e-4e65-8137-8197-f3c2901a0206" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://app.notion.com/p/Banco-de-teses-e-disserta-es-CAPES-cc8c5db7e9e245a794d323a9d6817324?pvs=21">Portal de Periódicos CAPES</a></li></ul><ul id="310eb69e-4e65-8136-9615-e966290e89c7" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://educapes.capes.gov.br/">EduCAPES</a></li></ul><ul id="310eb69e-4e65-81e3-94d3-caf77c792201" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://profept.ifes.edu.br/consulta-de-egressos-dissertacoes-produtos-educacionais">Biblioteca Prof EPT</a></li></ul><ul id="310eb69e-4e65-8173-94e9-ea553d1f4e69" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.sumarios.org/sobre-o-sum%C3%A1riosorg">Sumarios</a> - <a href="https://www.revistas.unijui.edu.br/index.php/contextoeducacao/about">Onde achei</a></li></ul><ul id="310eb69e-4e65-81d8-b5c9-f87c26fa8d70" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://livre.cnen.gov.br/Inicial.asp">LivRe!</a> <a href="https://livre2.cnen.gov.br/Sobre.asp">\[2\]</a></li></ul><ul id="310eb69e-4e65-8188-ae7d-e911ab531944" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.scopus.com/search/form.uri?display=basic#basic">Scopus</a><ul id="310eb69e-4e65-815b-8d85-cd57a8e29322" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://service.elsevier.com/app/answers/detail/a_id/34325/">Como buscar?</a></li></ul></li></ul><ul id="310eb69e-4e65-8197-bb3b-c0216ebd0bdb" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.elsevier.com/pt-br/search-results?query=%22computational%20thinking%22%20AND%20%22teacher%20education%22&amp;page=1">Elsevier</a></li></ul><ul id="310eb69e-4e65-8172-b082-e88932aac523" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.semanticscholar.org/">Semanticscholar</a><ul id="310eb69e-4e65-81c7-b519-fbf27c7eb541" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.semanticscholar.org/paper/Computational-thinking-a-guide-for-teachers-Csizmadia-Curzon/b8741512fec1821197c2f54e0bfadbdfef2d5302">Guide for teachers</a></li></ul></li></ul><ul id="310eb69e-4e65-81b4-9979-fbf3d89d0e67" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Google Academic</li></ul></div></details><ul id="310eb69e-4e65-8122-aaee-e0be18a83834" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Teses e Dissertações<ul id="310eb69e-4e65-81f5-9da9-df647296394d" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://catalogodeteses.capes.gov.br/catalogo-teses/#!/">Catálogo de Teses e Dissertações - CAPES</a></li></ul><ul id="310eb69e-4e65-8164-b83c-d4fca7ab16b7" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://bdtd.ibict.br/vufind/">BDTD - Biblioteca Digital Brasileira de Teses e Dissertações</a></li></ul></li></ul><ul id="310eb69e-4e65-8124-b258-cb83845ec3ad" class="bulleted-list" dir="auto"><li style="list-style-type:disc">TCC<ul id="310eb69e-4e65-81c6-96d2-c83aaa45e03a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Bibliotecas das universidades</li></ul></li></ul></div></details><details id="369eb69e-4e65-808a-bc25-d70445f91081" open="" class="toggle" dir="auto"><summary>Interagindo com a base de dados - Busca</summary><div class="indented"><ul id="310eb69e-4e65-81c0-bebb-e1937b29c4a1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Escolha de descritores / palavras-chave<ul id="310eb69e-4e65-81a5-8876-de6fe7604e05" class="bulleted-list" dir="auto"><li style="list-style-type:circle">plano de aula</li></ul><ul id="310eb69e-4e65-81ae-a8a1-f1623734508e" class="bulleted-list" dir="auto"><li style="list-style-type:circle">recurso [pedagógico]</li></ul><ul id="310eb69e-4e65-810e-af68-c23ccd26ea72" class="bulleted-list" dir="auto"><li style="list-style-type:circle">situação problema</li></ul><ul id="310eb69e-4e65-818b-9d9c-f09a43956475" class="bulleted-list" dir="auto"><li style="list-style-type:circle">proposta [pedagógica]</li></ul><ul id="310eb69e-4e65-8189-9f4a-c0f264628c8f" class="bulleted-list" dir="auto"><li style="list-style-type:circle">relato de experiência</li></ul><ul id="310eb69e-4e65-817c-a404-e1960a3a4f0f" class="bulleted-list" dir="auto"><li style="list-style-type:circle">estudo de caso</li></ul><ul id="310eb69e-4e65-81a9-acc2-ce1dde921274" class="bulleted-list" dir="auto"><li style="list-style-type:circle">artefato [educacional || pedagógico]</li></ul><ul id="310eb69e-4e65-8162-b589-ed241c526171" class="bulleted-list" dir="auto"><li style="list-style-type:circle">produto educacional</li></ul><ul id="310eb69e-4e65-81fa-a1e2-eb37a12d99bd" class="bulleted-list" dir="auto"><li style="list-style-type:circle">sequência didática</li></ul><ul id="310eb69e-4e65-81d3-903f-e1496fd3ab5a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">metodologia</li></ul></li></ul><ul id="310eb69e-4e65-81db-97d7-fe2e5602aa25" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Operadores<ul id="310eb69e-4e65-81a3-8555-e14c90ae2c5b" class="bulleted-list" dir="auto"><li style="list-style-type:circle">AND</li></ul><ul id="310eb69e-4e65-81b3-89f6-c9b9c914b356" class="bulleted-list" dir="auto"><li style="list-style-type:circle">OR</li></ul><ul id="310eb69e-4e65-816f-bde2-dd80bda7c6cb" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Aspas</li></ul></li></ul><ul id="310eb69e-4e65-8122-99d5-d5c45ad95707" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Filtros</li></ul><ul id="310eb69e-4e65-815c-a7e5-e84daa5773c6" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Tipos de trabalho<ul id="310eb69e-4e65-81fc-8961-fa013538e2a7" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Artigos</li></ul><ul id="310eb69e-4e65-81c9-a0c5-fc1bc5cdfd93" class="bulleted-list" dir="auto"><li style="list-style-type:circle">TCC</li></ul><ul id="310eb69e-4e65-8110-8817-c5933d5592c2" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Dissertação</li></ul><ul id="310eb69e-4e65-81b5-a384-e3b6cf4b77d4" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Tese</li></ul></li></ul></div></details><ul id="310eb69e-4e65-81c2-85e2-d5cbbaa026db" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Ao final são apresentados eventos da área em que os professores podem também compartilhar suas experiências de modo a inspirar outros docentes<ul id="310eb69e-4e65-8104-a37e-ea34bac13787" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.educompbrasil.org/simposio/2024/">EduComp</a></li></ul><ul id="310eb69e-4e65-815b-94b6-e0ff80aad7f4" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://cbie.sbc.org.br/2024/">CBIE</a></li></ul><ul id="310eb69e-4e65-8107-a8ea-c9f0630f67eb" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://computeronthebeach.com.br/">Computer on the beach</a></li></ul></li></ul></div></details><details id="310eb69e-4e65-81f1-884a-d9ac4f3e100a" open="" class="block-color-red_background toggle" data-notion-highlight="red_background" dir="auto"><summary>⌨️ Programação</summary><div class="indented"><ul id="310eb69e-4e65-81a9-b8ad-ed141db3d5bf" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Plataformas de programação com blocos</li></ul><details id="310eb69e-4e65-8127-8b51-cdc203b8e151" open="" class="toggle" dir="auto"><summary>Atividades - Programação em bloco</summary><div class="indented"><ul id="310eb69e-4e65-815c-986c-c066725e7a26" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://studio.code.org/hoc/1?lang=pt-BR">A hora do código</a></li></ul><ul id="310eb69e-4e65-8175-b71f-df7e4831ca17" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://blockly.games/?lang=pt-br">Blockly games</a></li></ul><ul id="310eb69e-4e65-81a5-b1ba-c768731935bf" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://armorgames.com/play/2205/light-bot">Light Bot</a></li></ul></div></details><ul id="310eb69e-4e65-8148-8687-c320f50dfc21" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Abordar estruturas de linguagens de programação imperativa, caso aos alunos já tenham contato prévio com alguma linguagem de programação será usado python, caso contrário será utilizado uma plataforma para programação com blocos<ul id="310eb69e-4e65-815b-a053-eb8c891c47e1" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Conteúdos: Comandos de entrada e saída, operadores aritméticos e condicional<ul id="310eb69e-4e65-81da-a676-c5b78b13b47d" class="bulleted-list" dir="auto"><li style="list-style-type:square">E/S e Operadores: <a href="https://olimpiada.ic.unicamp.br/pratique/pj/2012/f1/busca/">Busca na Internet</a>  [OBI - Programação - Jr - 2012 - Fase 1] </li></ul><ul id="310eb69e-4e65-8194-a8a0-dd3fb771188b" class="bulleted-list" dir="auto"><li style="list-style-type:square">E/S e Operadores: <strong><a href="https://olimpiada.ic.unicamp.br/pratique/p2/2018/f1/piso/">Piso da escola</a></strong><strong> </strong>[OBI - Programação - Jr - 2018 - Fase 1] </li></ul><figure id="310eb69e-4e65-8159-8d75-dadc3afd38a4" class="link-to-page"><a href="https://app.notion.com/p/Condicional-Cavalete-Autoria-pr-pria-310eb69e4e6581598d75dadc3afd38a4?pvs=21" data-notion-page-id="310eb69e-4e65-8159-8d75-dadc3afd38a4" data-notion-space-id="01f8088e-eb9d-4ff3-bd8a-feeb551a6586">Condicional: Cavalete [Autoria própria]</a></figure><ul id="310eb69e-4e65-81c8-a2e1-e0e89b68e0dd" class="bulleted-list" dir="auto"><li style="list-style-type:square">Condicional : <strong><a href="https://olimpiada.ic.unicamp.br/pratique/pj/2014/f1/fliper/">Flíper</a></strong><strong> </strong>[OBI - Programação - Jr - 2014 - Fase 1] </li></ul></li></ul></li></ul><details id="310eb69e-4e65-81e8-a0f5-c835acb883d0" open="" class="toggle" dir="auto"><summary>Plataformas para exercitar programação</summary><div class="indented"><ul id="310eb69e-4e65-81fc-a339-c9e70910e0f1" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://developers.google.com/blockly?hl=pt-br">Block Google - Linguagem base</a></li></ul><ul id="310eb69e-4e65-81a3-bf42-dad9166b6c0b" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://code.org/">Code.org</a></li></ul><ul id="310eb69e-4e65-81d2-94dd-d2488448f38d" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://scratch.mit.edu/">Scratch</a></li></ul><ul id="310eb69e-4e65-816a-8657-fe8fcfc7ee98" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://programae.org.br/">Programaê!</a></li></ul><ul id="310eb69e-4e65-81de-ae23-c2ea3ae77bae" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://codeiot.org.br/">CodeIOT</a></li></ul><ul id="310eb69e-4e65-812a-b570-f5281ec9ae21" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="http://www.drscratch.org/">DrScratch</a></li></ul><ul id="310eb69e-4e65-8136-8bbe-d843d428398a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://grasshopper.app/">Grasshopper</a></li></ul></div></details></div></details><details id="310eb69e-4e65-81a9-baba-cde591f4cb3b" open="" class="block-color-red_background toggle" data-notion-highlight="red_background" dir="auto"><summary>📝 Avaliações / Exames</summary><div class="indented"><details id="310eb69e-4e65-8193-8de8-c159e8996d04" open="" class="toggle" dir="auto"><summary><a href="https://www.oecd.org/pisa/innovation/">PISA</a></summary><div class="indented"><details id="310eb69e-4e65-8137-9cd2-f08ea81239e4" open="" class="toggle" dir="auto"><summary><a href="https://www.oecd.org/pisa/sitedocument/PISA-2021-mathematics-framework.pdf">Framework</a></summary><div class="indented"><ul id="310eb69e-4e65-8161-97b6-c76790130a70" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Pág 5 - A crescente e em constante evolução presença de computadores e ferramentas computacionais tanto na vida cotidiana quanto na prática da matemática é refletida no reconhecimento no framework do PISA 2021 de que os estudantes devem possuir e ser capazes de demonstrar habilidades de pensamento computacional como parte de sua prática de resolução de problemas. As habilidades de pensamento computacional incluem reconhecimento de padrões, decomposição, determinação de quais (se houver) ferramentas computacionais poderiam ser empregadas na análise ou resolução de um problema, e definição de algoritmos como parte de uma solução detalhada. Ao destacar a importância do pensamento computacional, o framework antecipa uma reflexão pelos países participantes sobre o papel do pensamento computacional nos currículos e na pedagogia da matemática.</li></ul><ul id="310eb69e-4e65-8144-addb-ed2d5a76384b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Pág 7 - À medida que a tecnologia desempenhará um papel crescente na vida dos estudantes, a trajetória de longo prazo da alfabetização matemática também deve abranger a relação sinérgica e recíproca entre o pensamento matemático e o pensamento computacional, introduzida em (Wing, 2006) como &quot;a maneira como os cientistas da computação pensam&quot; e considerada um processo de pensamento envolvido na formulação de problemas e no design de suas soluções de uma forma que possa ser executada por um computador, um ser humano ou uma combinação de ambos (Wing, 2011). Os papéis que o pensamento computacional desempenha na matemática incluem como tópicos matemáticos específicos interagem com tópicos de computação específicos, e como o raciocínio matemático complementa o pensamento computacional (Gadanidis, 2015; Rambally, 2017). Por exemplo, Pratt e Noss (2002) discutem o uso de um micromundo computacional para desenvolver conhecimento matemático no caso de aleatoriedade e probabilidade; Gadanidis et al. (2018) propõem uma abordagem para envolver crianças pequenas com ideias de teoria dos grupos, usando uma combinação de ferramentas práticas e de pensamento computacional. Portanto, enquanto a educação matemática evolui em termos das ferramentas disponíveis e das maneiras potenciais de apoiar os alunos na exploração das ideias poderosas da disciplina, o uso cuidadoso de ferramentas e conjuntos de habilidades de pensamento computacional pode aprofundar a aprendizagem dos conteúdos matemáticos, criando condições de aprendizagem eficazes. Além disso, as ferramentas de pensamento computacional oferecem aos alunos um contexto no qual podem reificar construções abstratas (explorando e interagindo com conceitos matemáticos de forma dinâmica), bem como expressar ideias de novas maneiras e interagir com conceitos por meio de mídia e novas ferramentas de representação.</li></ul><ul id="310eb69e-4e65-81ea-84a9-caacb52a76fc" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Pág 12- Pela primeira vez incluída no framework do PISA 2021 está uma apreciação da interseção entre o pensamento matemático e o pensamento computacional, gerando um conjunto similar de perspectivas, processos de pensamento e modelos mentais que os aprendizes precisam para ter sucesso em um mundo cada vez mais tecnológico. Um conjunto de práticas constituintes posicionadas sob o guarda-chuva do pensamento computacional (nomeadamente abstração, pensamento algorítmico, automação, decomposição e generalização) também são centrais tanto para o raciocínio matemático quanto para os processos de resolução de problemas. A natureza do pensamento computacional dentro da matemática é conceituada como definir e elaborar conhecimento matemático que pode ser expresso por meio de programação, permitindo que os alunos modelem dinamicamente conceitos e relacionamentos matemáticos. Uma taxonomia de práticas de pensamento computacional voltadas especificamente para a aprendizagem de matemática e ciências envolve práticas de dados, práticas de modelagem e simulação, práticas de resolução de problemas computacionais e práticas de pensamento de sistemas. A combinação de pensamento matemático e computacional não apenas se torna essencial para apoiar efetivamente o desenvolvimento da compreensão conceitual dos alunos no domínio matemático, mas também para desenvolver seus conceitos e habilidades de pensamento computacional, fornecendo aos aprendizes uma visão mais realista de como a matemática é praticada no mundo profissional e usada no mundo real e, por sua vez, melhor os prepara para buscar carreiras em áreas relacionadas.</li></ul><ul id="310eb69e-4e65-8151-b8c3-d72472216e46" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Pág 21 - Interpretando, Aplicando e Avaliando Resultados Matemáticos: criticando e identificando os limites do modelo usado para resolver um problema; e usando o pensamento matemático e o pensamento computacional para fazer previsões, fornecer evidências para argumentos, testar e comparar soluções propostas.</li></ul><ul id="310eb69e-4e65-8189-a899-f5fbcded7326" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Pág 41 - Pensamento computacional: Aspectos do pensamento computacional constituem uma dimensão em rápida evolução e crescimento tanto da matemática quanto da alfabetização matemática. O framework de alfabetização matemática do PISA 2021 ilustra como o pensamento computacional é tanto parte da prática da matemática quanto impacta na realização da matemática. Os módulos de valores e crenças sobre aprendizagem e mente aberta dos questionários de contexto podem explorar a experiência dos alunos sobre o papel do pensamento computacional na prática da matemática.</li></ul></div></details><ul id="310eb69e-4e65-81a3-9035-c2c5d0877af5" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.oecd.org/publication/pisa-2022-results/resources">Recursos PISA</a></li></ul><details id="310eb69e-4e65-81e5-9850-db343e6088f7" open="" class="toggle" dir="auto"><summary><a href="https://pisa2022-maths.oecd.org/">PISA 2022 MATHEMATICS FRAMEWORK</a></summary><div class="indented"><p id="310eb69e-4e65-81d8-ba05-d630298895c0" class="" dir="auto"><strong>O que há de novo no PISA 2022</strong><br/>O PISA 2022 tem como objetivo considerar a matemática em um mundo em rápida mudança impulsionado por novas tecnologias e tendências, no qual os cidadãos são criativos e engajados, fazendo julgamentos não-rotineiros para si mesmos e para a sociedade em que vivem. Isso coloca em foco a capacidade de raciocinar matematicamente, que sempre fez parte do framework do PISA. Essa mudança tecnológica também está criando a necessidade de os alunos entenderem os conceitos de <strong>Pensamento Computacional</strong> que fazem parte da alfabetização matemática. Por fim, o framework reconhece que uma avaliação aprimorada baseada em computador está disponível para a maioria dos alunos dentro do PISA.</p></div></details><ul id="310eb69e-4e65-817d-a86b-d1dc530f46e2" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.oecd.org/pisa/test/pisa-2022-mathematics-test-questions.htm">Questões Teste</a></li></ul><details id="310eb69e-4e65-8128-a2bd-ea0ef9257a12" open="" class="toggle" dir="auto"><summary><a href="https://www.educacionfpydeportes.gob.es/dam/jcr:bb415ffc-edfd-4b4f-9961-cbdfbb5d535b/pisa-2022-framework.pdf">PISA 2022 Assessment and Analytical Framework</a></summary><div class="indented"><p id="310eb69e-4e65-81ba-8502-e0cdd340075f" class="" dir="auto">Pág 272 - A avaliação de matemática no PISA 2022 inclui desenvolvimentos que são de particular interesse para este framework, especialmente em relação à alfabetização em TIC. Para refletir o papel crescente da tecnologia na vida dos alunos e explorar competências cada vez mais procuradas, a avaliação da alfabetização matemática tem dado mais ênfase ao pensamento computacional. Nesse contexto, o pensamento computacional refere-se à formulação de problemas e ao design de suas soluções de uma forma que possa ser executada por ou com um computador (Cuny, Snyder e Wing, 2010). Além disso, o framework de avaliação do PISA 2022 identifica o pensamento crítico, a criatividade, a pesquisa e a investigação, a autodireção, a iniciativa e a persistência, o uso da informação, o pensamento sistêmico, a comunicação e a reflexão como habilidades críticas do século XXI a serem incluídas na avaliação de matemática (OCDE, 2018).</p><p id="310eb69e-4e65-81c7-89fe-cab97b7ceb88" class="" dir="auto">Pág 276 - Resolução de problemas em um contexto digital e pensamento computacional</p><p id="310eb69e-4e65-8126-971d-d3cfe53e3128" class="" dir="auto">Pág 278 - De acordo com o ICILS 2018, o pensamento computacional pode ser definido como a &quot;habilidade de identificar um problema, dividi-lo em etapas gerenciáveis, trabalhar os detalhes ou padrões importantes, moldar soluções possíveis e apresentar essas soluções de forma que um computador, humano ou ambos possam entender&quot; (IEA, 2017). Embora o pensamento computacional e a resolução de problemas em um ambiente digital se sobreponham fortemente e compartilhem muitos processos de pensamento, uma diferença fundamental pode ser que o pensamento computacional se concentra em como confiar nas possibilidades digitais e de computação para resolver problemas e executar soluções. De fato, um estudo recente destaca que &quot;o pensamento computacional é uma metodologia de resolução de problemas que expande o domínio da ciência da computação para todas as disciplinas, fornecendo um meio distinto de analisar e desenvolver soluções para problemas que podem ser resolvidos computacionalmente&quot; (ACM et al., 2016). De acordo com a Associação de Professores de Ciência da Computação (CSTA) e a Sociedade Internacional para Tecnologia na Educação, a avaliação do pensamento computacional pode se concentrar nos seguintes processos-chave:</p><ul id="310eb69e-4e65-819e-9740-f9cc3f205aa8" class="bulleted-list" dir="auto"><li style="list-style-type:disc">&quot;formular problemas de uma maneira que nos permita usar um computador e outras ferramentas para ajudar a resolvê-los</li></ul><ul id="310eb69e-4e65-81ee-9b5b-f6134a5ec792" class="bulleted-list" dir="auto"><li style="list-style-type:disc">organizar e analisar logicamente dados</li></ul><ul id="310eb69e-4e65-81fd-a599-d6ee49ef6037" class="bulleted-list" dir="auto"><li style="list-style-type:disc">representar dados por meio de abstrações como modelos e simulações</li></ul><ul id="310eb69e-4e65-812a-b7b5-f4eb3412edeb" class="bulleted-list" dir="auto"><li style="list-style-type:disc">automatizar soluções por meio do pensamento algorítmico (uma série de etapas ordenadas)</li></ul><ul id="310eb69e-4e65-819c-988a-d3b1735ba891" class="bulleted-list" dir="auto"><li style="list-style-type:disc">identificar, analisar e implementar possíveis soluções com o objetivo de alcançar a combinação mais eficiente e eficaz de etapas e recursos</li></ul><ul id="310eb69e-4e65-8167-b960-e629550b74c0" class="bulleted-list" dir="auto"><li style="list-style-type:disc">generalizar e transferir esse processo de resolução de problemas para uma ampla variedade de problemas.&quot;</li></ul></div></details><details id="310eb69e-4e65-812d-af15-c965365d309a" open="" class="toggle" dir="auto"><summary>Exemplos de questões</summary><div class="indented"><ul id="310eb69e-4e65-81fe-b035-e9a49e196c02" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Uso de smartphones: Este item ilustra:<ul id="310eb69e-4e65-815b-b611-fa9fb4e52624" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Capacidades de CBAM, em particular o uso de planilhas com classificação e outras capacidades.</li></ul></li></ul><ul id="310eb69e-4e65-81d0-977b-c41ed271da22" class="bulleted-list" dir="auto"><li style="list-style-type:disc">A beleza das potências: Este item ilustra:<ul id="310eb69e-4e65-8130-90f0-ee6fbde8a066" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Uma variedade de itens de raciocínio matemático, desde simples até mais complexos em um contexto matemático; e</li></ul><ul id="310eb69e-4e65-8171-9ce1-c582b92edb35" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Indica fenômenos de crescimento, embora, para ser justo, o contexto deste item seja mais focado em raciocínio e reconhecimento de padrões do que em crescimento.</li></ul></li></ul><ul id="310eb69e-4e65-8171-8c9a-cdc8e5e489c6" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Sempre, às vezes, nunca: Este item ilustra:<ul id="310eb69e-4e65-816f-9077-f5586c9da951" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Uma variedade de itens de raciocínio, desde simples até mais complexos, incluindo uma variedade de tipos de perguntas, desde sim/não e múltipla escolha até itens abertos.</li></ul></li></ul><ul id="310eb69e-4e65-81e0-8c24-c07a7f62eb61" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Telhas: Este item ilustra:<ul id="310eb69e-4e65-813d-8c64-d7149b6484d8" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Raciocínio e pensamento computacional; e</li></ul><ul id="310eb69e-4e65-812e-81d2-ee1159d31a01" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Representações geométricas.</li></ul></li></ul><ul id="310eb69e-4e65-81db-a20b-e17d543aaa77" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Decisão de compra: Este item ilustra:<ul id="310eb69e-4e65-8191-a21e-ed2b0ae7470a" class="bulleted-list" dir="auto"><li style="list-style-type:circle">A aplicação de tomada de decisão condicional.</li></ul></li></ul><ul id="310eb69e-4e65-81b7-969e-c29f765b58cc" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Navegação: Este item ilustra:<ul id="310eb69e-4e65-81b8-9bac-c77cd4ca1941" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Raciocínio em um contexto geométrico; e</li></ul><ul id="310eb69e-4e65-818b-bf9d-cb57b4d35802" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Capacidades de CBAM nos itens.</li></ul></li></ul><ul id="310eb69e-4e65-818b-937a-cef5466ca03a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Simulação de poupança: Este item ilustra:<ul id="310eb69e-4e65-813f-b327-ebc81cd59cf8" class="bulleted-list" dir="auto"><li style="list-style-type:circle">O uso de uma simulação de computador; e</li></ul><ul id="310eb69e-4e65-8191-a60c-ff85f3f38577" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Indica crescimento no contexto e impacto do interesse.</li></ul></li></ul></div></details><details id="310eb69e-4e65-8132-8d56-f87d8b406f1e" open="" class="toggle" dir="auto"><summary>Exemplo 4: Questão telhas</summary><div class="indented"><p id="310eb69e-4e65-81cb-8bb2-cf1f59172817" class="" dir="auto">Este item ilustra raciocínio e pensamento computacional e representações geométricas.</p><figure id="310eb69e-4e65-813c-8ea5-df218d0143ff" class="image" data-notion-image="Untitled.png" dir="ltr"><a href="Untitled.png"><img style="width:624px" src="Untitled.png"/></a></figure><figure id="310eb69e-4e65-81f5-bb70-d1be2b859eea" class="image" data-notion-image="Untitled%201.png" dir="ltr"><a href="Untitled%201.png"><img style="width:624px" src="Untitled%201.png"/></a></figure><figure id="310eb69e-4e65-8148-9003-fda6578f2921" class="image" data-notion-image="Untitled%202.png" dir="ltr"><a href="Untitled%202.png"><img style="width:624px" src="Untitled%202.png"/></a></figure><figure id="310eb69e-4e65-8156-b239-c08b132b8d2c" class="image" data-notion-image="Untitled%203.png" dir="ltr"><a href="Untitled%203.png"><img style="width:624px" src="Untitled%203.png"/></a></figure><figure id="310eb69e-4e65-81d7-a635-c5df2f47d0ed" class="image" data-notion-image="Untitled%204.png" dir="ltr"><a href="Untitled%204.png"><img style="width:624px" src="Untitled%204.png"/></a></figure><figure id="310eb69e-4e65-81e3-8f15-e9bf729e8f1e" class="image" data-notion-image="Untitled%205.png" dir="ltr"><a href="Untitled%205.png"><img style="width:1024px" src="Untitled%205.png"/></a></figure><figure id="310eb69e-4e65-8176-b906-fde9f682b892" class="image" data-notion-image="Untitled%206.png" dir="ltr"><a href="Untitled%206.png"><img style="width:624px" src="Untitled%206.png"/></a></figure></div></details></div></details><details id="310eb69e-4e65-819b-9170-d7ecd21f89e5" open="" class="toggle" dir="auto"><summary>Questionários</summary><div class="indented"><ul id="310eb69e-4e65-81f0-9c90-cf53d2480e97" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Teste de Románet al.(2015)<ul id="310eb69e-4e65-8184-9303-d4ba9b1fc99f" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdPdSj_ZVUhIhG4S3bCH6zXSHZoHHbv6OsmCF9drmbDpfBy_Q/viewform">Site original</a></li></ul><ul id="310eb69e-4e65-81db-b1c6-eac80aa19aa0" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.researchgate.net/publication/292398919_Test_de_Pensamiento_Computacional_diseno_y_psicometria_general_Computational_Thinking_Test_design_general_psychometry?channel=doi&amp;linkId=56ae371208ae19a385160253&amp;showFulltext=true">Artigo original</a></li></ul><ul id="310eb69e-4e65-817f-9246-d470529f56cf" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://lume.ufrgs.br/bitstream/handle/10183/172208/001054290.pdf?sequence=1&amp;isAllowed=y">Tradução </a></li></ul><ul id="310eb69e-4e65-8195-9de4-de71a28f33cf" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://seer.ufrgs.br/index.php/renote/article/view/99894/55943">Artigo Brackman</a></li></ul></li></ul><ul id="310eb69e-4e65-81d8-ba1c-febc9905c707" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Avaliação - Linguagem de Programação Visual<ul id="310eb69e-4e65-81a3-b9c1-da23c68ce2a2" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://repositorio.ufsc.br/handle/123456789/206321">Alves, Nathalia da Cruz, 2015</a></li></ul></li></ul></div></details><ul id="310eb69e-4e65-816d-83e4-db5172ae3963" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Olimpíadas<ul id="310eb69e-4e65-810e-b03c-c0b6f76b9a3d" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://desafio.bebrasbrasil.com.br/">Desafio Bebras - Maior Competição Internacional de Pensamento Computacional</a><ul id="310eb69e-4e65-8112-9ea6-edef08b4ae4f" class="bulleted-list" dir="auto"><li style="list-style-type:square">3º ano do Fundamental I até o 3º ano do Ensino Médio</li></ul><ul id="310eb69e-4e65-81f2-8b31-da60539059ae" class="bulleted-list" dir="auto"><li style="list-style-type:square"> <a href="https://www.bebras.org/">Site principal</a></li></ul><ul id="310eb69e-4e65-8155-be81-c447f0644cee" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://bebras.pt/">Realização em portugal</a></li></ul><ul id="310eb69e-4e65-815b-8e04-c011602d8015" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://desafio.bebrasbrasil.com.br/">Aplicação no Brasil</a></li></ul><ul id="310eb69e-4e65-8138-aa2b-c73cac7f7552" class="bulleted-list" dir="auto"><li style="list-style-type:square"><a href="https://upmat-gestao.s3.us-west-2.amazonaws.com/Desafio/BOOK_BEBRAS_2023_10Tasks.pdf">Apresentação Bebras Brasil</a></li></ul></li></ul><ul id="310eb69e-4e65-81a4-bbe3-d1769b756187" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://olimpiada.ic.unicamp.br/">OBI - Olimpíada Brasileira de Informática</a></li></ul><ul id="310eb69e-4e65-81a7-9934-f76ce7640b72" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://www.obrl.com.br/">OBRL -  Olimpíada Brasileira de Raciocínio Lógico</a></li></ul><ul id="310eb69e-4e65-811b-abac-f9a6e7961f54" class="bulleted-list" dir="auto"><li style="list-style-type:circle"><a href="https://olimpiadas.ufsm.br/inscricoes">Competições</a></li></ul></li></ul></div></details><details id="310eb69e-4e65-8174-b4b4-e111447a0a0f" open="" class="block-color-red_background toggle" data-notion-highlight="red_background" dir="auto"><summary>⚙️ Plataforma para exercitar a criação de algoritmos</summary><div class="indented"><ul id="310eb69e-4e65-81c5-8723-cf3b0fa09774" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://judge.beecrowd.com/pt">Beecrowd</a><ul id="310eb69e-4e65-8193-8c87-dad5cba84846" class="bulleted-list" dir="auto"><li style="list-style-type:circle">Beecrowd é um site brasileiro que conta com mais de 3000 problemas de programação, divididos em 9 categorias, como iniciante, ad-hoc, strings, grafos, etc. Você pode enviar seu código em várias linguagens e ver sua pontuação no ranking.</li></ul></li></ul><ul id="310eb69e-4e65-810d-8f8f-d1de7d5ae274" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://www.hackerrank.com/">Hackerrank</a><ul id="310eb69e-4e65-810b-9086-cf84cfe3feb0" class="bulleted-list" dir="auto"><li style="list-style-type:circle">A plataforma oferece uma ampla gama de desafios de programação em diversas categorias, como algoritmos, estruturas de dados, matemática e mais. Os usuários podem escolher entre várias linguagens de programação populares, como Javascript, C++, Java,  Python, entre outras, para resolver os desafios.</li></ul></li></ul></div></details><details id="310eb69e-4e65-8110-a5d0-d9d67d216414" open="" class="block-color-red_background toggle" data-notion-highlight="red_background" dir="auto"><summary><strong>MATERIAL COMPLEMENTAR</strong></summary><div class="indented"><details id="310eb69e-4e65-81de-86b7-dcc33088d679" open="" class="toggle" dir="auto"><summary>Cursos para aprofundamento na programação</summary><div class="indented"><p id="310eb69e-4e65-8164-b57d-dc8fa652a305" class="" dir="auto"><a href="https://www.cursoemvideo.com/curso/curso-de-algoritmo/">Algoritmo - Curso em vídeo - Gustavo Guanabara</a></p><p id="310eb69e-4e65-81f6-84fe-ca1650b365b4" class="" dir="auto"><a href="https://www.youtube.com/watch?v=S9uPNppGsGo&amp;list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0">Python - Curso em vídeo - Gustavo Guanabara</a></p><p id="310eb69e-4e65-8181-9c68-ca2326964f65" class="" dir="auto"><a href="https://olimpiada.ic.unicamp.br/saci/cursos/python/">Programação para Iniciantes (Blockly+Python) - OBI</a></p><p id="310eb69e-4e65-819f-b6b1-c15f34841b31" class="" dir="auto"><a href="https://www.youtube.com/watch?v=YO58tXerKDc&amp;list=PLUukMN0DTKCtbzhbYe2jdF4cr8MOWClXc">Python for Zombies</a></p><p id="310eb69e-4e65-819f-a021-ffb42babfcf0" class="" dir="auto">Curso Python - Academia Cisco</p><ul id="310eb69e-4e65-8145-aae6-f0d73e3d9473" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://skillsforall.com/pt/learningcollections/python?courseLang=en-US">Curso Python - Academia Cisco</a></li></ul><details id="310eb69e-4e65-8154-971c-eaaa24f163d0" open="" class="toggle" dir="auto"><summary><a href="https://pll.harvard.edu/course/cs50-introduction-computer-science">CS50 Harvard</a></summary><div class="indented"><ul id="310eb69e-4e65-8178-a18f-d6c4cb1aeda7" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Acesso ao conteúdo por semana</li></ul><ul id="310eb69e-4e65-81cc-b474-ef2157691747" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://fundacao-estudar.myedools.com/cc50-o-curso-de-ciencia-da-computacao-de-harvard">Versão Br</a></li></ul></div></details></div></details><details id="310eb69e-4e65-811b-afe2-e0e6894306ca" open="" class="toggle" dir="auto"><summary>Livros</summary><div class="indented"><ul id="310eb69e-4e65-81fe-85b5-cde90e6cc3d0" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://editora.vecher.com.br/index.php/vel/search/search?query=giraffa">Editora Triálogo</a> [<a href="https://editora.vecher.com.br/index.php/vel/catalog">Catálogo</a>] - Livros com linguagem lúdica sobre algoritmos</li></ul><ul id="310eb69e-4e65-81cc-bd07-eb8c4ca61636" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><a href="https://acervodigital.ufpr.br/xmlui/handle/1884/87473">Desenhando com Turtle Graphics: Aprenda e ensine matemática e programação com o Blockly, a linguagem de blocos do Google</a></li></ul></div></details></div></details></div></details><p id="3a0eb69e-4e65-80a9-a13f-f20d3ce1a073" class="" dir="auto">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
